@@ -11,6 +11,7 @@
 		EF0A69A522ECDBF6004115F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A322ECDBF6004115F4 /* Main.storyboard */; };
 		EF0A69A722ECDC1B004115F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A622ECDC1B004115F4 /* Assets.xcassets */; };
 		EF0A69AA22ECDC1B004115F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A822ECDC1B004115F4 /* LaunchScreen.storyboard */; };
+		EF0A69B222ECF051004115F4 /* OnboardOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0A69B122ECF051004115F4 /* OnboardOneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		EF0A69A622ECDC1B004115F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF0A69A922ECDC1B004115F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF0A69AB22ECDC1B004115F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF0A69B122ECF051004115F4 /* OnboardOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardOneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */,
 				EF0A69A322ECDBF6004115F4 /* Main.storyboard */,
+				EF0A69B122ECF051004115F4 /* OnboardOneViewController.swift */,
 				EF0A69A622ECDC1B004115F4 /* Assets.xcassets */,
 				EF0A69A822ECDC1B004115F4 /* LaunchScreen.storyboard */,
 				EF0A69AB22ECDC1B004115F4 /* Info.plist */,
@@ -133,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */,
+				EF0A69B222ECF051004115F4 /* OnboardOneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
