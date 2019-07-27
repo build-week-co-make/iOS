@@ -50,7 +50,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gf-N7-Nx8">
-                                        <rect key="frame" x="33" y="133" width="349" height="88.5"/>
+                                        <rect key="frame" x="33" y="106" width="349" height="88.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Whether it's potholes, overgrown weeds, imporper road signs, or anything else, Comake is the place to make your voice heard.">
                                                 <attributes>
@@ -62,7 +62,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="c0w-Wo-cKz">
-                                        <rect key="frame" x="149" y="266.5" width="116" height="28"/>
+                                        <rect key="frame" x="149" y="239.5" width="116" height="28"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,7 +73,7 @@
                                     <constraint firstItem="KYd-fc-u01" firstAttribute="top" secondItem="liN-VT-4wH" secondAttribute="top" constant="44" id="ijw-74-nMg"/>
                                     <constraint firstItem="4Gf-N7-Nx8" firstAttribute="leading" secondItem="liN-VT-4wH" secondAttribute="leading" constant="33" id="nPd-Jy-hQv"/>
                                     <constraint firstItem="KYd-fc-u01" firstAttribute="leading" secondItem="liN-VT-4wH" secondAttribute="leading" constant="50" id="o6E-9f-eAf"/>
-                                    <constraint firstItem="4Gf-N7-Nx8" firstAttribute="top" secondItem="KYd-fc-u01" secondAttribute="bottom" constant="60" id="oSz-RF-YTX"/>
+                                    <constraint firstItem="4Gf-N7-Nx8" firstAttribute="top" secondItem="KYd-fc-u01" secondAttribute="bottom" constant="33" id="oSz-RF-YTX"/>
                                     <constraint firstAttribute="trailing" secondItem="KYd-fc-u01" secondAttribute="trailing" constant="50" id="xwH-ok-02V"/>
                                     <constraint firstAttribute="trailing" secondItem="c0w-Wo-cKz" secondAttribute="trailing" constant="149" id="yih-jH-qOk"/>
                                 </constraints>
@@ -199,13 +199,87 @@
                     <view key="view" contentMode="scaleToFill" id="cZB-aA-cog">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pattern-2" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-ld-u6B">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone Copy" translatesAutoresizingMaskIntoConstraints="NO" id="jr2-dY-GGh">
+                                <rect key="frame" x="43" y="87" width="328" height="644"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="bermuda-success" translatesAutoresizingMaskIntoConstraints="NO" id="FY6-3c-jnC">
+                                <rect key="frame" x="78" y="151" width="258" height="310.00000000000011"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngO-xv-Vzo">
+                                <rect key="frame" x="0.0" y="521" width="414" height="375"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and it gets resolved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3z-aj-6YN">
+                                        <rect key="frame" x="50" y="44" width="314" height="29"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYX-2f-W7f">
+                                        <rect key="frame" x="33" y="103" width="348" height="88.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Issues with most upvotes get resolved first by local government and Homeowners’ Associations (plus you get rewarded for helping out your community!)</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="14" name="SFProDisplay-Medium"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="19" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-v7-vBo">
+                                        <rect key="frame" x="149" y="236.5" width="116" height="28"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="m3z-aj-6YN" firstAttribute="top" secondItem="ngO-xv-Vzo" secondAttribute="top" constant="44" id="8zq-HX-vNL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fg7-v7-vBo" secondAttribute="trailing" constant="149" id="AZB-JU-3K7"/>
+                                    <constraint firstItem="Fg7-v7-vBo" firstAttribute="leading" secondItem="ngO-xv-Vzo" secondAttribute="leading" constant="149" id="DXE-eg-xvG"/>
+                                    <constraint firstItem="KYX-2f-W7f" firstAttribute="leading" secondItem="ngO-xv-Vzo" secondAttribute="leading" constant="33" id="YH2-q1-F7K"/>
+                                    <constraint firstItem="Fg7-v7-vBo" firstAttribute="top" secondItem="KYX-2f-W7f" secondAttribute="bottom" constant="45" id="Zqp-i8-D9g"/>
+                                    <constraint firstItem="KYX-2f-W7f" firstAttribute="top" secondItem="m3z-aj-6YN" secondAttribute="bottom" constant="30" id="lif-iA-c2P"/>
+                                    <constraint firstAttribute="trailing" secondItem="KYX-2f-W7f" secondAttribute="trailing" constant="33" id="mnX-Z7-xPC"/>
+                                    <constraint firstItem="m3z-aj-6YN" firstAttribute="leading" secondItem="ngO-xv-Vzo" secondAttribute="leading" constant="50" id="om8-4i-qew"/>
+                                    <constraint firstAttribute="trailing" secondItem="m3z-aj-6YN" secondAttribute="trailing" constant="50" id="xGI-y6-MHi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rql-BV-neJ" firstAttribute="trailing" secondItem="hAT-ld-u6B" secondAttribute="trailing" id="6LV-Ve-yBS"/>
+                            <constraint firstItem="rql-BV-neJ" firstAttribute="bottom" secondItem="jr2-dY-GGh" secondAttribute="bottom" constant="131" id="F7J-d0-AQ7"/>
+                            <constraint firstItem="rql-BV-neJ" firstAttribute="bottom" secondItem="hAT-ld-u6B" secondAttribute="bottom" id="H1g-Xi-kGo"/>
+                            <constraint firstItem="hAT-ld-u6B" firstAttribute="leading" secondItem="rql-BV-neJ" secondAttribute="leading" id="Kn0-qZ-ocC"/>
+                            <constraint firstItem="ngO-xv-Vzo" firstAttribute="leading" secondItem="rql-BV-neJ" secondAttribute="leading" id="RMw-0r-wEh"/>
+                            <constraint firstItem="jr2-dY-GGh" firstAttribute="leading" secondItem="rql-BV-neJ" secondAttribute="leading" constant="43" id="WPM-Vs-gBw"/>
+                            <constraint firstItem="hAT-ld-u6B" firstAttribute="top" secondItem="rql-BV-neJ" secondAttribute="top" id="Zpm-Uh-f6N"/>
+                            <constraint firstItem="FY6-3c-jnC" firstAttribute="leading" secondItem="rql-BV-neJ" secondAttribute="leading" constant="78" id="cZ1-Y8-ia0"/>
+                            <constraint firstItem="ngO-xv-Vzo" firstAttribute="top" secondItem="FY6-3c-jnC" secondAttribute="bottom" constant="60" id="iSe-RJ-6Bd"/>
+                            <constraint firstItem="ngO-xv-Vzo" firstAttribute="trailing" secondItem="rql-BV-neJ" secondAttribute="trailing" id="lDI-B8-nh7"/>
+                            <constraint firstItem="FY6-3c-jnC" firstAttribute="top" secondItem="rql-BV-neJ" secondAttribute="top" constant="107" id="lxl-QF-w1K"/>
+                            <constraint firstItem="rql-BV-neJ" firstAttribute="trailing" secondItem="jr2-dY-GGh" secondAttribute="trailing" constant="43" id="qBN-Zh-Up4"/>
+                            <constraint firstItem="rql-BV-neJ" firstAttribute="trailing" secondItem="FY6-3c-jnC" secondAttribute="trailing" constant="78" id="sIs-SD-pNC"/>
+                            <constraint firstAttribute="bottom" secondItem="ngO-xv-Vzo" secondAttribute="bottom" id="ug4-p5-EZW"/>
+                            <constraint firstItem="jr2-dY-GGh" firstAttribute="top" secondItem="rql-BV-neJ" secondAttribute="top" constant="43" id="wYf-kG-Bju"/>
+                            <constraint firstItem="rql-BV-neJ" firstAttribute="bottom" secondItem="FY6-3c-jnC" secondAttribute="bottom" constant="401" id="xqB-f5-VJZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rql-BV-neJ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eF4-hN-Nbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530" y="135"/>
+            <point key="canvasLocation" x="1528.985507246377" y="134.59821428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rt1-jm-cah">
@@ -226,9 +300,11 @@
     <resources>
         <image name="Background" width="375" height="812"/>
         <image name="Pattern-1" width="375" height="812"/>
+        <image name="Pattern-2" width="375" height="812"/>
         <image name="arrow" width="47" height="28"/>
         <image name="bermuda-message-sent" width="277" height="295"/>
         <image name="bermuda-no-comments" width="271" height="327"/>
+        <image name="bermuda-success" width="297" height="392"/>
         <image name="iPhone Copy" width="297" height="612"/>
     </resources>
 </document>
