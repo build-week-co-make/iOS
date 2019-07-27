@@ -12,6 +12,10 @@
 		EF0A69A722ECDC1B004115F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A622ECDC1B004115F4 /* Assets.xcassets */; };
 		EF0A69AA22ECDC1B004115F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A822ECDC1B004115F4 /* LaunchScreen.storyboard */; };
 		EF0A69B222ECF051004115F4 /* OnboardOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0A69B122ECF051004115F4 /* OnboardOneViewController.swift */; };
+		EFF49FB122ED042600363D1C /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFF49FAF22ED02DD00363D1C /* SF-Pro-Display-Medium.otf */; };
+		EFF49FB222ED046300363D1C /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFF49FA922ED029800363D1C /* SF-Pro-Display-Regular.otf */; };
+		EFF49FB322ED046500363D1C /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFF49FAB22ED02CC00363D1C /* SF-Pro-Display-Medium.otf */; };
+		EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB422ED07E200363D1C /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,11 @@
 		EF0A69A922ECDC1B004115F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF0A69AB22ECDC1B004115F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF0A69B122ECF051004115F4 /* OnboardOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardOneViewController.swift; sourceTree = "<group>"; };
+		EFF49FA922ED029800363D1C /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../../Volumes/SF-Font-Pro/San Francisco Pro/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		EFF49FAB22ED02CC00363D1C /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Medium.otf"; path = "../../../../../../../Volumes/SF-Font-Pro/San Francisco Pro/SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		EFF49FAF22ED02DD00363D1C /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		EFF49FB022ED037900363D1C /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../../../Volumes/SF-Font-Pro/San Francisco Pro/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		EFF49FB422ED07E200363D1C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +65,25 @@
 			children = (
 				EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */,
 				EF0A69A322ECDBF6004115F4 /* Main.storyboard */,
+				EFF49FB422ED07E200363D1C /* PageViewController.swift */,
 				EF0A69B122ECF051004115F4 /* OnboardOneViewController.swift */,
 				EF0A69A622ECDC1B004115F4 /* Assets.xcassets */,
 				EF0A69A822ECDC1B004115F4 /* LaunchScreen.storyboard */,
 				EF0A69AB22ECDC1B004115F4 /* Info.plist */,
+				EFF49FAD22ED02DD00363D1C /* Fonts */,
+				EFF49FA922ED029800363D1C /* SF-Pro-Display-Regular.otf */,
+				EFF49FAB22ED02CC00363D1C /* SF-Pro-Display-Medium.otf */,
 			);
 			path = "Co-Make";
+			sourceTree = "<group>";
+		};
+		EFF49FAD22ED02DD00363D1C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EFF49FB022ED037900363D1C /* SF-Pro-Display-Regular.otf */,
+				EFF49FAF22ED02DD00363D1C /* SF-Pro-Display-Medium.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +144,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF49FB322ED046500363D1C /* SF-Pro-Display-Medium.otf in Resources */,
+				EFF49FB122ED042600363D1C /* SF-Pro-Display-Medium.otf in Resources */,
 				EF0A69AA22ECDC1B004115F4 /* LaunchScreen.storyboard in Resources */,
 				EF0A69A722ECDC1B004115F4 /* Assets.xcassets in Resources */,
+				EFF49FB222ED046300363D1C /* SF-Pro-Display-Regular.otf in Resources */,
 				EF0A69A522ECDBF6004115F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
 				EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */,
 				EF0A69B222ECF051004115F4 /* OnboardOneViewController.swift in Sources */,
 			);

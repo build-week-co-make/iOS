@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ts6-zh-Lgg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="guD-Ez-gJa">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,11 +9,24 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="eV1-4O-Peb">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="guD-Ez-gJa" customClass="PageViewController" customModule="Co_Make" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwY-mE-Gjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-826" y="131"/>
+        </scene>
         <!--Onboard One View Controller-->
         <scene sceneID="RQq-Uy-KMb">
             <objects>
-                <viewController id="ts6-zh-Lgg" customClass="OnboardOneViewController" customModule="Co_Make" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstOnboard" id="ts6-zh-Lgg" customClass="OnboardOneViewController" customModule="Co_Make" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1eB-bR-MZ7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,17 +44,17 @@
                                 <rect key="frame" x="0.0" y="521" width="414" height="341"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="See something annoying?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYd-fc-u01">
-                                        <rect key="frame" x="50" y="44" width="314" height="31.5"/>
-                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="24"/>
+                                        <rect key="frame" x="50" y="44" width="314" height="29"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gf-N7-Nx8">
-                                        <rect key="frame" x="33" y="95.5" width="349" height="138.5"/>
+                                        <rect key="frame" x="33" y="133" width="349" height="88.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Whether it's potholes, overgrown weeds, imporper road signs, or anything else, Comake is the place to make your voice heard.">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <font key="NSFont" size="14" name="SFProDisplay-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="19" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -49,7 +62,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="c0w-Wo-cKz">
-                                        <rect key="frame" x="149" y="279" width="116" height="28"/>
+                                        <rect key="frame" x="149" y="266.5" width="116" height="28"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +73,7 @@
                                     <constraint firstItem="KYd-fc-u01" firstAttribute="top" secondItem="liN-VT-4wH" secondAttribute="top" constant="44" id="ijw-74-nMg"/>
                                     <constraint firstItem="4Gf-N7-Nx8" firstAttribute="leading" secondItem="liN-VT-4wH" secondAttribute="leading" constant="33" id="nPd-Jy-hQv"/>
                                     <constraint firstItem="KYd-fc-u01" firstAttribute="leading" secondItem="liN-VT-4wH" secondAttribute="leading" constant="50" id="o6E-9f-eAf"/>
-                                    <constraint firstItem="4Gf-N7-Nx8" firstAttribute="top" secondItem="KYd-fc-u01" secondAttribute="bottom" constant="20" id="oSz-RF-YTX"/>
+                                    <constraint firstItem="4Gf-N7-Nx8" firstAttribute="top" secondItem="KYd-fc-u01" secondAttribute="bottom" constant="60" id="oSz-RF-YTX"/>
                                     <constraint firstAttribute="trailing" secondItem="KYd-fc-u01" secondAttribute="trailing" constant="50" id="xwH-ok-02V"/>
                                     <constraint firstAttribute="trailing" secondItem="c0w-Wo-cKz" secondAttribute="trailing" constant="149" id="yih-jH-qOk"/>
                                 </constraints>
@@ -94,7 +107,7 @@
         <!--View Controller-->
         <scene sceneID="F5V-gB-7O5">
             <objects>
-                <viewController id="TwI-qn-M49" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondOnboard" id="TwI-qn-M49" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kBa-Yr-2BL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,17 +125,44 @@
                                 <rect key="frame" x="0.0" y="521" width="414" height="375"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Your community upvotes it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5so-bs-Nw4">
-                                        <rect key="frame" x="50" y="44" width="314" height="31.5"/>
-                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="24"/>
+                                        <rect key="frame" x="50" y="44" width="314" height="29"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEU-47-X8S">
+                                        <rect key="frame" x="33" y="133" width="349" height="52"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Neighbors and community members share and upvote posted issues. ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="14" name="SFProDisplay-ThinItalic"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="19" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="IfA-TC-9h3">
+                                        <rect key="frame" x="149" y="230" width="116" height="28"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IfA-TC-9h3" secondAttribute="trailing" constant="149" id="35K-Sb-5nq"/>
                                     <constraint firstItem="5so-bs-Nw4" firstAttribute="leading" secondItem="tJM-48-A4x" secondAttribute="leading" constant="50" id="E4u-NN-ott"/>
                                     <constraint firstAttribute="trailing" secondItem="5so-bs-Nw4" secondAttribute="trailing" constant="50" id="EUW-Ql-Fro"/>
+                                    <constraint firstAttribute="trailing" secondItem="PEU-47-X8S" secondAttribute="trailing" constant="32" id="Msw-YL-Jis"/>
                                     <constraint firstItem="5so-bs-Nw4" firstAttribute="top" secondItem="tJM-48-A4x" secondAttribute="top" constant="44" id="S7I-lh-NwO"/>
+                                    <constraint firstItem="IfA-TC-9h3" firstAttribute="top" secondItem="PEU-47-X8S" secondAttribute="bottom" constant="45" id="c77-Ij-KDp"/>
+                                    <constraint firstItem="PEU-47-X8S" firstAttribute="leading" secondItem="tJM-48-A4x" secondAttribute="leading" constant="33" id="mnc-eK-fRQ"/>
+                                    <constraint firstItem="PEU-47-X8S" firstAttribute="top" secondItem="5so-bs-Nw4" secondAttribute="bottom" constant="60" id="rTj-OP-MHa"/>
+                                    <constraint firstItem="IfA-TC-9h3" firstAttribute="leading" secondItem="tJM-48-A4x" secondAttribute="leading" constant="149" id="uxO-J5-MCi"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -151,6 +191,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8X1-bP-tYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="753.62318840579712" y="130.58035714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ymA-M3-HwU">
+            <objects>
+                <viewController storyboardIdentifier="ThirdOnboard" id="nDX-dH-Uf6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cZB-aA-cog">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rql-BV-neJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eF4-hN-Nbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="135"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rt1-jm-cah">
+            <objects>
+                <viewController storyboardIdentifier="SignUp" id="kww-DH-BS9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xba-7B-mEi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="azl-AK-uIh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PIx-NX-BG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2288" y="130"/>
         </scene>
     </scenes>
     <resources>
