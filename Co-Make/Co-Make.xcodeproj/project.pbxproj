@@ -15,6 +15,8 @@
 		EFF49FB222ED046300363D1C /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFF49FA922ED029800363D1C /* SF-Pro-Display-Regular.otf */; };
 		EFF49FB322ED046500363D1C /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFF49FAB22ED02CC00363D1C /* SF-Pro-Display-Medium.otf */; };
 		EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB422ED07E200363D1C /* PageViewController.swift */; };
+		EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB622ED372D00363D1C /* LoginViewController.swift */; };
+		EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB822ED373F00363D1C /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		EFF49FAF22ED02DD00363D1C /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		EFF49FB022ED037900363D1C /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../../../Volumes/SF-Font-Pro/San Francisco Pro/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		EFF49FB422ED07E200363D1C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		EFF49FB622ED372D00363D1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EFF49FB822ED373F00363D1C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 			children = (
 				EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */,
 				EF0A69A322ECDBF6004115F4 /* Main.storyboard */,
+				EFF49FB622ED372D00363D1C /* LoginViewController.swift */,
+				EFF49FB822ED373F00363D1C /* SignUpViewController.swift */,
 				EFF49FB422ED07E200363D1C /* PageViewController.swift */,
 				EF0A69A622ECDC1B004115F4 /* Assets.xcassets */,
 				EF0A69A822ECDC1B004115F4 /* LaunchScreen.storyboard */,
@@ -157,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */,
 				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
+				EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */,
 				EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
