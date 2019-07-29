@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2D0F7DC22EF841800175F8C /* CreateIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */; };
 		6FC1726822EF912F007A380C /* Co-Make.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */; };
 		6FC1726A22EF9186007A380C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726922EF9186007A380C /* CoreDataStack.swift */; };
 		6FC1726C22EF92F5007A380C /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726B22EF92F5007A380C /* User+Convenience.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueViewController.swift; sourceTree = "<group>"; };
 		6FC1726722EF912F007A380C /* Co-Make.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Co-Make.xcdatamodel"; sourceTree = "<group>"; };
 		6FC1726922EF9186007A380C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		6FC1726B22EF92F5007A380C /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				EFF7981622EF877E001CE26D /* IssueVIewController.swift */,
 				EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */,
 				EFF7981222EF6742001CE26D /* CreateIssue.storyboard */,
+				A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */,
 				EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */,
 				EF03D4AF22EE6EF600A01648 /* New Group */,
 				EF0A69A622ECDC1B004115F4 /* Assets.xcassets */,
@@ -213,6 +216,7 @@
 				EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */,
 				EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */,
 				EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */,
+				A2D0F7DC22EF841800175F8C /* CreateIssueViewController.swift in Sources */,
 				EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */,
 				EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */,
 				EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */,
