@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */; };
 		EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */; };
+		EF03D4B322EE7A9000A01648 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B222EE7A9000A01648 /* User.swift */; };
+		EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B422EE7B0000A01648 /* APIController.swift */; };
+		EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B622EE7E6200A01648 /* Bearer.swift */; };
+		EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */; };
 		EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */; };
 		EF0A69A522ECDBF6004115F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A322ECDBF6004115F4 /* Main.storyboard */; };
 		EF0A69A722ECDC1B004115F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A622ECDC1B004115F4 /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllowLocationViewController.swift; path = ../AllowLocationViewController.swift; sourceTree = "<group>"; };
 		EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		EF03D4B222EE7A9000A01648 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EF03D4B422EE7B0000A01648 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		EF03D4B622EE7E6200A01648 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bearer.swift; path = "../New Group/Bearer.swift"; sourceTree = "<group>"; };
+		EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		EF0A699C22ECDBF6004115F4 /* Co-Make.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Co-Make.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0A69A422ECDBF6004115F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +64,16 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		EF03D4B822EE7EC300A01648 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */,
+				EF03D4B222EE7A9000A01648 /* User.swift */,
+				EF03D4B622EE7E6200A01648 /* Bearer.swift */,
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		EF0A699322ECDBF5004115F4 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +93,8 @@
 		EF0A699E22ECDBF6004115F4 /* Co-Make */ = {
 			isa = PBXGroup;
 			children = (
+				EF03D4B422EE7B0000A01648 /* APIController.swift */,
+				EF03D4B822EE7EC300A01648 /* New Group1 */,
 				EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */,
 				EF0A69A322ECDBF6004115F4 /* Main.storyboard */,
 				EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */,
@@ -167,12 +187,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */,
 				EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */,
 				EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */,
+				EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */,
 				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
 				EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */,
+				EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */,
 				EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */,
 				EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */,
+				EF03D4B322EE7A9000A01648 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
