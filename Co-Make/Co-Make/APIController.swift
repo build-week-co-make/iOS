@@ -20,6 +20,7 @@ class ApiController {
     }
     
     var user: User?
+    var userRepresentation: UserRepresentation?
     var bearer: Bearer?
     var userAuthentication: UserAuthentication?
     
@@ -36,7 +37,7 @@ class ApiController {
         
         let jsonEncoder = JSONEncoder()
         do {
-            let jsonData = try jsonEncoder.encode(user)
+            let jsonData = try jsonEncoder.encode(userRepresentation)
             request.httpBody = jsonData
         } catch {
             print("Error encoding user object: \(error)")
