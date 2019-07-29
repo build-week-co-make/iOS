@@ -47,6 +47,8 @@ class AllowLocationViewController: UIViewController, CLLocationManagerDelegate {
             if error == nil{
                 if let place = places {
                     zipCode = place[0].postalCode!
+                    
+                    // Assign zipcode to user here.
 //                    user.zipcode = zipCode
                     print(zipCode)
                     
@@ -55,6 +57,7 @@ class AllowLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    // Presents alert that will allow users to enable location services for app.
     func determineMyCurrentLocation() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -75,6 +78,8 @@ class AllowLocationViewController: UIViewController, CLLocationManagerDelegate {
         
         latitude = userLocation.coordinate.latitude
         longitude = userLocation.coordinate.longitude
+        
+        // Gets zip code from coordinates.
         
         getZip(latitude: latitude, longitude: longitude)
         
