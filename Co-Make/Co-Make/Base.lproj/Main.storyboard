@@ -304,7 +304,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrn-g9-pyT">
                                 <rect key="frame" x="0.0" y="528" width="414" height="368"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgT-Ve-oV8">
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgT-Ve-oV8">
                                         <rect key="frame" x="44" y="25" width="326" height="28"/>
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -751,7 +751,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maG-Hf-Esj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6297" y="465"/>
+            <point key="canvasLocation" x="6157" y="463"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Weh-mB-Arb">
@@ -767,7 +767,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WR-Fo-GTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7904" y="433"/>
+            <point key="canvasLocation" x="7654" y="451"/>
         </scene>
         <!--Profile-->
         <scene sceneID="s02-sd-Dtd">
@@ -783,7 +783,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNE-z5-Jld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8667" y="451"/>
+            <point key="canvasLocation" x="8371" y="451"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="gaP-EN-FGp">
@@ -799,7 +799,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone Copy" translatesAutoresizingMaskIntoConstraints="NO" id="olh-PE-EwD">
                                 <rect key="frame" x="43" y="87" width="328" height="644"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="sign-up-5" translatesAutoresizingMaskIntoConstraints="NO" id="r3v-Mq-h5e">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="sign-in-4" translatesAutoresizingMaskIntoConstraints="NO" id="r3v-Mq-h5e">
                                 <rect key="frame" x="78" y="151" width="258" height="310"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fb7-Jg-hsU">
@@ -931,6 +931,7 @@
                 <tabBarController storyboardIdentifier="MainView" automaticallyAdjustsScrollViewInsets="NO" id="M4N-Ll-Cwa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="toI-Ml-ter">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -972,6 +973,7 @@
         <image name="marker2" width="14" height="16"/>
         <image name="marker4" width="14" height="16"/>
         <image name="profile" width="21" height="22"/>
+        <image name="sign-in-4" width="299" height="201"/>
         <image name="sign-up-5" width="285" height="275"/>
     </resources>
 </document>

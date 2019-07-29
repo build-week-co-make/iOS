@@ -21,6 +21,7 @@
 		EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB422ED07E200363D1C /* PageViewController.swift */; };
 		EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB622ED372D00363D1C /* LoginViewController.swift */; };
 		EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB822ED373F00363D1C /* SignUpViewController.swift */; };
+		EFF7981122EF585E001CE26D /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981022EF585E001CE26D /* Design.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EFF49FB422ED07E200363D1C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = ../PageViewController.swift; sourceTree = "<group>"; };
 		EFF49FB622ED372D00363D1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		EFF49FB822ED373F00363D1C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
+		EFF7981022EF585E001CE26D /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Design.swift; path = "../../../../Buildo/Buildo/Buildo/OnboardingVc's/Design.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */,
 				EFF49FB622ED372D00363D1C /* LoginViewController.swift */,
 				EFF49FB822ED373F00363D1C /* SignUpViewController.swift */,
+				EFF7981022EF585E001CE26D /* Design.swift */,
 				EFF49FB422ED07E200363D1C /* PageViewController.swift */,
 			);
 			path = "New Group";
@@ -190,6 +193,7 @@
 				EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */,
 				EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */,
 				EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */,
+				EFF7981122EF585E001CE26D /* Design.swift in Sources */,
 				EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */,
 				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
 				EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */,
