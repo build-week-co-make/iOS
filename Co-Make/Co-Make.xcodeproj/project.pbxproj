@@ -23,6 +23,8 @@
 		EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB822ED373F00363D1C /* SignUpViewController.swift */; };
 		EFF7981122EF585E001CE26D /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981022EF585E001CE26D /* Design.swift */; };
 		EFF7981322EF6742001CE26D /* CreateIssue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF7981222EF6742001CE26D /* CreateIssue.storyboard */; };
+		EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */; };
+		EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981622EF877E001CE26D /* IssueVIewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		EFF49FB822ED373F00363D1C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 		EFF7981022EF585E001CE26D /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Design.swift; path = "../../../../Buildo/Buildo/Buildo/OnboardingVc's/Design.swift"; sourceTree = "<group>"; };
 		EFF7981222EF6742001CE26D /* CreateIssue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateIssue.storyboard; sourceTree = "<group>"; };
+		EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
+		EFF7981622EF877E001CE26D /* IssueVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVIewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				EF03D4B822EE7EC300A01648 /* New Group1 */,
 				EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */,
 				EF0A69A322ECDBF6004115F4 /* Main.storyboard */,
+				EFF7981622EF877E001CE26D /* IssueVIewController.swift */,
+				EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */,
 				EFF7981222EF6742001CE26D /* CreateIssue.storyboard */,
 				EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */,
 				EF03D4AF22EE6EF600A01648 /* New Group */,
@@ -194,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */,
 				EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */,
 				EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */,
 				EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */,
+				EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */,
 				EFF7981122EF585E001CE26D /* Design.swift in Sources */,
 				EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */,
 				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
