@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A2D0F7DC22EF841800175F8C /* CreateIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */; };
+		6FC1726822EF912F007A380C /* Co-Make.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */; };
+		6FC1726A22EF9186007A380C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726922EF9186007A380C /* CoreDataStack.swift */; };
+		6FC1726C22EF92F5007A380C /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726B22EF92F5007A380C /* User+Convenience.swift */; };
 		EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */; };
 		EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */; };
-		EF03D4B322EE7A9000A01648 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B222EE7A9000A01648 /* User.swift */; };
+		EF03D4B322EE7A9000A01648 /* UserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */; };
 		EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B422EE7B0000A01648 /* APIController.swift */; };
 		EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B622EE7E6200A01648 /* Bearer.swift */; };
 		EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */; };
@@ -22,15 +25,20 @@
 		EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB422ED07E200363D1C /* PageViewController.swift */; };
 		EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB622ED372D00363D1C /* LoginViewController.swift */; };
 		EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB822ED373F00363D1C /* SignUpViewController.swift */; };
-		EFF7981122EF585E001CE26D /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981022EF585E001CE26D /* Design.swift */; };
 		EFF7981322EF6742001CE26D /* CreateIssue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF7981222EF6742001CE26D /* CreateIssue.storyboard */; };
+		EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */; };
+		EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981622EF877E001CE26D /* IssueVIewController.swift */; };
+		EFF7981922EF8E81001CE26D /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981822EF8E81001CE26D /* Design.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueViewController.swift; sourceTree = "<group>"; };
+		6FC1726722EF912F007A380C /* Co-Make.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Co-Make.xcdatamodel"; sourceTree = "<group>"; };
+		6FC1726922EF9186007A380C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		6FC1726B22EF92F5007A380C /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
 		EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllowLocationViewController.swift; path = ../AllowLocationViewController.swift; sourceTree = "<group>"; };
 		EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		EF03D4B222EE7A9000A01648 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentation.swift; sourceTree = "<group>"; };
 		EF03D4B422EE7B0000A01648 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		EF03D4B622EE7E6200A01648 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bearer.swift; path = "../New Group/Bearer.swift"; sourceTree = "<group>"; };
 		EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
@@ -44,8 +52,10 @@
 		EFF49FB422ED07E200363D1C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = ../PageViewController.swift; sourceTree = "<group>"; };
 		EFF49FB622ED372D00363D1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		EFF49FB822ED373F00363D1C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
-		EFF7981022EF585E001CE26D /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Design.swift; path = "../../../../Buildo/Buildo/Buildo/OnboardingVc's/Design.swift"; sourceTree = "<group>"; };
 		EFF7981222EF6742001CE26D /* CreateIssue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateIssue.storyboard; sourceTree = "<group>"; };
+		EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
+		EFF7981622EF877E001CE26D /* IssueVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVIewController.swift; sourceTree = "<group>"; };
+		EFF7981822EF8E81001CE26D /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +75,6 @@
 				EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */,
 				EFF49FB622ED372D00363D1C /* LoginViewController.swift */,
 				EFF49FB822ED373F00363D1C /* SignUpViewController.swift */,
-				EFF7981022EF585E001CE26D /* Design.swift */,
 				EFF49FB422ED07E200363D1C /* PageViewController.swift */,
 			);
 			path = "New Group";
@@ -75,8 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */,
-				EF03D4B222EE7A9000A01648 /* User.swift */,
+				EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */,
 				EF03D4B622EE7E6200A01648 /* Bearer.swift */,
+				6FC1726B22EF92F5007A380C /* User+Convenience.swift */,
+				6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */,
+				6FC1726922EF9186007A380C /* CoreDataStack.swift */,
 			);
 			path = "New Group1";
 			sourceTree = "<group>";
@@ -84,6 +96,7 @@
 		EF0A699322ECDBF5004115F4 = {
 			isa = PBXGroup;
 			children = (
+				EFF7981822EF8E81001CE26D /* Design.swift */,
 				EF0A699E22ECDBF6004115F4 /* Co-Make */,
 				EF0A699D22ECDBF6004115F4 /* Products */,
 			);
@@ -104,6 +117,8 @@
 				EF03D4B822EE7EC300A01648 /* New Group1 */,
 				EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */,
 				EF0A69A322ECDBF6004115F4 /* Main.storyboard */,
+				EFF7981622EF877E001CE26D /* IssueVIewController.swift */,
+				EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */,
 				EFF7981222EF6742001CE26D /* CreateIssue.storyboard */,
 				A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */,
 				EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */,
@@ -197,18 +212,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC1726A22EF9186007A380C /* CoreDataStack.swift in Sources */,
+				EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */,
 				EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */,
 				EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */,
 				A2D0F7DC22EF841800175F8C /* CreateIssueViewController.swift in Sources */,
 				EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */,
-				EFF7981122EF585E001CE26D /* Design.swift in Sources */,
+				EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */,
 				EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */,
 				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
+				6FC1726C22EF92F5007A380C /* User+Convenience.swift in Sources */,
 				EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */,
 				EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */,
 				EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */,
+				EFF7981922EF8E81001CE26D /* Design.swift in Sources */,
+				6FC1726822EF912F007A380C /* Co-Make.xcdatamodeld in Sources */,
 				EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */,
-				EF03D4B322EE7A9000A01648 /* User.swift in Sources */,
+				EF03D4B322EE7A9000A01648 /* UserRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +428,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6FC1726722EF912F007A380C /* Co-Make.xcdatamodel */,
+			);
+			currentVersion = 6FC1726722EF912F007A380C /* Co-Make.xcdatamodel */;
+			path = "Co-Make.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EF0A699422ECDBF5004115F4 /* Project object */;
 }

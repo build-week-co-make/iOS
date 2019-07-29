@@ -617,7 +617,7 @@
         <!--Feed-->
         <scene sceneID="7PA-MH-noi">
             <objects>
-                <viewController id="tD0-GN-mvh" sceneMemberID="viewController">
+                <viewController id="tD0-GN-mvh" customClass="FeedViewController" customModule="Co_Make" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XDL-kU-7cC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,15 +626,94 @@
                                 <rect key="frame" x="0.0" y="329" width="414" height="484"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IssueCell" rowHeight="203" id="q2X-FG-6D0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IssueCell" rowHeight="203" id="q2X-FG-6D0" customClass="IssueTableViewCell" customModule="Co_Make" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="203"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q2X-FG-6D0" id="hDA-Fa-Bs2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="202.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ROa-vB-cMo">
+                                                    <rect key="frame" x="20" y="11" width="139" height="165"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issue Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3B-QA-mDH">
+                                                    <rect key="frame" x="167" y="11" width="227" height="38"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issue Creator" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhG-vW-Hsc">
+                                                    <rect key="frame" x="167" y="30" width="227" height="38"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FilterType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5X-cJ-lKs">
+                                                    <rect key="frame" x="178" y="114" width="58" height="14"/>
+                                                    <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FilterType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C90-5m-gy3">
+                                                    <rect key="frame" x="244" y="114" width="51" height="14"/>
+                                                    <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="arrow-circle-up-outline" translatesAutoresizingMaskIntoConstraints="NO" id="0lg-qV-74t">
+                                                    <rect key="frame" x="178" y="150" width="20" height="20"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="int Votes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zB-RG-HPq">
+                                                    <rect key="frame" x="206" y="153" width="59" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
+                                                    <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZhG-vW-Hsc" firstAttribute="leading" secondItem="ROa-vB-cMo" secondAttribute="trailing" constant="8" id="1lF-FB-mw0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2zB-RG-HPq" secondAttribute="bottom" constant="24.5" id="4uS-Bw-9PS"/>
+                                                <constraint firstItem="ZhG-vW-Hsc" firstAttribute="trailing" secondItem="hDA-Fa-Bs2" secondAttribute="trailingMargin" id="89C-Ha-xEX"/>
+                                                <constraint firstItem="D3B-QA-mDH" firstAttribute="trailing" secondItem="hDA-Fa-Bs2" secondAttribute="trailingMargin" id="8BO-ph-hUL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="b5X-cJ-lKs" secondAttribute="trailing" constant="158" id="CkU-zm-cYR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZhG-vW-Hsc" secondAttribute="bottom" constant="124" id="DqG-lA-Fr3"/>
+                                                <constraint firstItem="b5X-cJ-lKs" firstAttribute="leading" secondItem="ROa-vB-cMo" secondAttribute="trailing" constant="19" id="HG0-Fx-LoS"/>
+                                                <constraint firstItem="ROa-vB-cMo" firstAttribute="top" secondItem="hDA-Fa-Bs2" secondAttribute="topMargin" id="Mej-aP-RTR"/>
+                                                <constraint firstItem="D3B-QA-mDH" firstAttribute="top" secondItem="hDA-Fa-Bs2" secondAttribute="topMargin" id="UuV-eB-WsU"/>
+                                                <constraint firstItem="2zB-RG-HPq" firstAttribute="leading" secondItem="0lg-qV-74t" secondAttribute="trailing" constant="8" id="VzX-du-u6V"/>
+                                                <constraint firstItem="C90-5m-gy3" firstAttribute="top" secondItem="ZhG-vW-Hsc" secondAttribute="bottom" constant="46" id="Xji-oH-lCA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ROa-vB-cMo" secondAttribute="trailing" constant="235" id="Y5m-kV-D3k"/>
+                                                <constraint firstItem="b5X-cJ-lKs" firstAttribute="top" secondItem="ZhG-vW-Hsc" secondAttribute="bottom" constant="46" id="Yzp-jV-mXQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="C90-5m-gy3" secondAttribute="trailing" constant="99" id="bVs-nj-IRU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2zB-RG-HPq" secondAttribute="trailing" constant="129" id="fpg-Fj-M2n"/>
+                                                <constraint firstItem="C90-5m-gy3" firstAttribute="leading" secondItem="b5X-cJ-lKs" secondAttribute="trailing" constant="8" id="hL2-hn-CDO"/>
+                                                <constraint firstItem="D3B-QA-mDH" firstAttribute="leading" secondItem="ROa-vB-cMo" secondAttribute="trailing" constant="8" id="kDh-Aa-ocL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="D3B-QA-mDH" secondAttribute="bottom" constant="143" id="nxh-Cp-dIv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0lg-qV-74t" secondAttribute="bottom" constant="22" id="rDj-mZ-T0m"/>
+                                                <constraint firstItem="ZhG-vW-Hsc" firstAttribute="top" secondItem="hDA-Fa-Bs2" secondAttribute="topMargin" constant="19" id="sRN-pz-TVZ"/>
+                                                <constraint firstItem="ROa-vB-cMo" firstAttribute="leading" secondItem="hDA-Fa-Bs2" secondAttribute="leadingMargin" id="tzv-Xz-LgX"/>
+                                                <constraint firstItem="0lg-qV-74t" firstAttribute="leading" secondItem="ROa-vB-cMo" secondAttribute="trailing" constant="19" id="xWF-aq-DRq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ROa-vB-cMo" secondAttribute="bottom" constant="16" id="y0o-Qj-Exh"/>
+                                                <constraint firstItem="2zB-RG-HPq" firstAttribute="top" secondItem="b5X-cJ-lKs" secondAttribute="bottom" constant="25" id="yh1-2D-EVp"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstFIlterType" destination="b5X-cJ-lKs" id="ODD-BA-9tl"/>
+                                            <outlet property="issueCreator" destination="ZhG-vW-Hsc" id="Zch-0D-nv5"/>
+                                            <outlet property="issueImage" destination="ROa-vB-cMo" id="zan-HB-O0r"/>
+                                            <outlet property="issueTitle" destination="D3B-QA-mDH" id="enf-Pt-WxA"/>
+                                            <outlet property="numberOfUpVotes" destination="2zB-RG-HPq" id="hFz-wu-CQb"/>
+                                            <outlet property="secondFilterType" destination="C90-5m-gy3" id="jN3-E2-F4u"/>
+                                            <segue destination="xUi-DA-Nbz" kind="presentation" identifier="IssuePopSegue" modalPresentationStyle="overCurrentContext" id="6fi-WR-FD2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tD0-GN-mvh" id="Wo6-iy-PPI"/>
+                                    <outlet property="delegate" destination="tD0-GN-mvh" id="LzO-UN-RZE"/>
+                                </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="dia-A2-kHL">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="321"/>
@@ -748,10 +827,17 @@
                         <viewLayoutGuide key="safeArea" id="tRg-qO-tDG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="feed" selectedImage="feed" id="yvJ-5o-kYO"/>
+                    <connections>
+                        <outlet property="issuesTableView" destination="Cy1-2m-wPu" id="UrR-Fu-dyL"/>
+                        <outlet property="searchIssues" destination="zMb-yf-sUv" id="Jxx-Z8-pM7"/>
+                        <outlet property="userActualName" destination="mgH-Cg-fv0" id="BZt-jB-EcZ"/>
+                        <outlet property="userAddress" destination="1bY-gL-dEL" id="70g-ZV-1LR"/>
+                        <outlet property="userImage" destination="MCE-wV-YWc" id="8VA-lg-QdG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maG-Hf-Esj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6157" y="463"/>
+            <point key="canvasLocation" x="6156.521739130435" y="462.72321428571428"/>
         </scene>
         <!--CreateIssue-->
         <scene sceneID="KOW-ra-dIu">
@@ -762,6 +848,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZK-27-oW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6647" y="385"/>
+        </scene>
+        <!--IssueV Iew Controller-->
+        <scene sceneID="CAD-ft-ULb">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="xUi-DA-Nbz" customClass="IssueVIewController" customModule="Co_Make" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lhj-5i-Dwx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aQH-EW-jTD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESI-VQ-f2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7033" y="463"/>
         </scene>
         <!--Profile-->
         <scene sceneID="s02-sd-Dtd">
@@ -777,7 +878,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNE-z5-Jld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7168" y="463"/>
+            <point key="canvasLocation" x="7833" y="463"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="gaP-EN-FGp">
@@ -951,6 +1052,7 @@
         <image name="Pattern-2" width="375" height="812"/>
         <image name="World map" width="375" height="812"/>
         <image name="arrow" width="47" height="28"/>
+        <image name="arrow-circle-up-outline" width="20" height="20"/>
         <image name="bermuda-message-sent" width="277" height="295"/>
         <image name="bermuda-no-comments" width="271" height="327"/>
         <image name="bermuda-success" width="297" height="392"/>
