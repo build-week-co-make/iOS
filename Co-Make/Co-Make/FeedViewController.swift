@@ -25,9 +25,9 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchIssues.cornerRadius = 20
+     searchIssues.cornerRadius = 20
         userImage.image = UIImage(named: "sign-in-4")
-        userImage.cornerRadius = 23
+     userImage.cornerRadius = 23
         
     }
     

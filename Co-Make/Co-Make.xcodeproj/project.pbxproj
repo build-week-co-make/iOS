@@ -21,10 +21,10 @@
 		EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB422ED07E200363D1C /* PageViewController.swift */; };
 		EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB622ED372D00363D1C /* LoginViewController.swift */; };
 		EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB822ED373F00363D1C /* SignUpViewController.swift */; };
-		EFF7981122EF585E001CE26D /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981022EF585E001CE26D /* Design.swift */; };
 		EFF7981322EF6742001CE26D /* CreateIssue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF7981222EF6742001CE26D /* CreateIssue.storyboard */; };
 		EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */; };
 		EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981622EF877E001CE26D /* IssueVIewController.swift */; };
+		EFF7981922EF8E81001CE26D /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981822EF8E81001CE26D /* Design.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +44,10 @@
 		EFF49FB422ED07E200363D1C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = ../PageViewController.swift; sourceTree = "<group>"; };
 		EFF49FB622ED372D00363D1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		EFF49FB822ED373F00363D1C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
-		EFF7981022EF585E001CE26D /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Design.swift; path = "../../../../Buildo/Buildo/Buildo/OnboardingVc's/Design.swift"; sourceTree = "<group>"; };
 		EFF7981222EF6742001CE26D /* CreateIssue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateIssue.storyboard; sourceTree = "<group>"; };
 		EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
 		EFF7981622EF877E001CE26D /* IssueVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVIewController.swift; sourceTree = "<group>"; };
+		EFF7981822EF8E81001CE26D /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,6 @@
 				EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */,
 				EFF49FB622ED372D00363D1C /* LoginViewController.swift */,
 				EFF49FB822ED373F00363D1C /* SignUpViewController.swift */,
-				EFF7981022EF585E001CE26D /* Design.swift */,
 				EFF49FB422ED07E200363D1C /* PageViewController.swift */,
 			);
 			path = "New Group";
@@ -86,6 +85,7 @@
 		EF0A699322ECDBF5004115F4 = {
 			isa = PBXGroup;
 			children = (
+				EFF7981822EF8E81001CE26D /* Design.swift */,
 				EF0A699E22ECDBF6004115F4 /* Co-Make */,
 				EF0A699D22ECDBF6004115F4 /* Products */,
 			);
@@ -205,12 +205,12 @@
 				EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */,
 				EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */,
 				EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */,
-				EFF7981122EF585E001CE26D /* Design.swift in Sources */,
 				EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */,
 				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
 				EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */,
 				EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */,
 				EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */,
+				EFF7981922EF8E81001CE26D /* Design.swift in Sources */,
 				EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */,
 				EF03D4B322EE7A9000A01648 /* User.swift in Sources */,
 			);
