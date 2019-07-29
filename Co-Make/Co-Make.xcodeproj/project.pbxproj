@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FC1726822EF912F007A380C /* Co-Make.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */; };
+		6FC1726A22EF9186007A380C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726922EF9186007A380C /* CoreDataStack.swift */; };
 		EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */; };
 		EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */; };
 		EF03D4B322EE7A9000A01648 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B222EE7A9000A01648 /* User.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6FC1726722EF912F007A380C /* Co-Make.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Co-Make.xcdatamodel"; sourceTree = "<group>"; };
+		6FC1726922EF9186007A380C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllowLocationViewController.swift; path = ../AllowLocationViewController.swift; sourceTree = "<group>"; };
 		EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EF03D4B222EE7A9000A01648 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */,
 				EF03D4B222EE7A9000A01648 /* User.swift */,
 				EF03D4B622EE7E6200A01648 /* Bearer.swift */,
+				6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */,
+				6FC1726922EF9186007A380C /* CoreDataStack.swift */,
 			);
 			path = "New Group1";
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC1726A22EF9186007A380C /* CoreDataStack.swift in Sources */,
 				EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */,
 				EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */,
 				EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */,
@@ -211,6 +218,7 @@
 				EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */,
 				EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */,
 				EFF7981922EF8E81001CE26D /* Design.swift in Sources */,
+				6FC1726822EF912F007A380C /* Co-Make.xcdatamodeld in Sources */,
 				EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */,
 				EF03D4B322EE7A9000A01648 /* User.swift in Sources */,
 			);
@@ -412,6 +420,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6FC1726722EF912F007A380C /* Co-Make.xcdatamodel */,
+			);
+			currentVersion = 6FC1726722EF912F007A380C /* Co-Make.xcdatamodel */;
+			path = "Co-Make.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EF0A699422ECDBF5004115F4 /* Project object */;
 }
