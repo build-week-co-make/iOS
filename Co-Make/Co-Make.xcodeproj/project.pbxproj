@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2D0F7DC22EF841800175F8C /* CreateIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */; };
 		6FC1726822EF912F007A380C /* Co-Make.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */; };
 		6FC1726A22EF9186007A380C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726922EF9186007A380C /* CoreDataStack.swift */; };
 		6FC1726C22EF92F5007A380C /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726B22EF92F5007A380C /* User+Convenience.swift */; };
+		A2D0F7DC22EF841800175F8C /* CreateIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */; };
 		EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */; };
 		EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */; };
 		EF03D4B322EE7A9000A01648 /* UserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */; };
@@ -29,13 +29,14 @@
 		EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */; };
 		EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981622EF877E001CE26D /* IssueVIewController.swift */; };
 		EFF7981922EF8E81001CE26D /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981822EF8E81001CE26D /* Design.swift */; };
+		EFF7981D22EFAF82001CE26D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981C22EFAF82001CE26D /* ImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueViewController.swift; sourceTree = "<group>"; };
 		6FC1726722EF912F007A380C /* Co-Make.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Co-Make.xcdatamodel"; sourceTree = "<group>"; };
 		6FC1726922EF9186007A380C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		6FC1726B22EF92F5007A380C /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
+		A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueViewController.swift; sourceTree = "<group>"; };
 		EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllowLocationViewController.swift; path = ../AllowLocationViewController.swift; sourceTree = "<group>"; };
 		EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentation.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
 		EFF7981622EF877E001CE26D /* IssueVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVIewController.swift; sourceTree = "<group>"; };
 		EFF7981822EF8E81001CE26D /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
+		EFF7981C22EFAF82001CE26D /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */,
 				EF0A69A322ECDBF6004115F4 /* Main.storyboard */,
 				EFF7981622EF877E001CE26D /* IssueVIewController.swift */,
+				EFF7981C22EFAF82001CE26D /* ImageCell.swift */,
 				EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */,
 				EFF7981222EF6742001CE26D /* CreateIssue.storyboard */,
 				A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */,
@@ -223,6 +226,7 @@
 				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
 				6FC1726C22EF92F5007A380C /* User+Convenience.swift in Sources */,
 				EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */,
+				EFF7981D22EFAF82001CE26D /* ImageCell.swift in Sources */,
 				EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */,
 				EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */,
 				EFF7981922EF8E81001CE26D /* Design.swift in Sources */,
