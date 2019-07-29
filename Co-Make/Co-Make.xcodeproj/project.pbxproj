@@ -22,6 +22,7 @@
 		EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB622ED372D00363D1C /* LoginViewController.swift */; };
 		EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49FB822ED373F00363D1C /* SignUpViewController.swift */; };
 		EFF7981122EF585E001CE26D /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981022EF585E001CE26D /* Design.swift */; };
+		EFF7981322EF6742001CE26D /* CreateIssue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF7981222EF6742001CE26D /* CreateIssue.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		EFF49FB622ED372D00363D1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		EFF49FB822ED373F00363D1C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 		EFF7981022EF585E001CE26D /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Design.swift; path = "../../../../Buildo/Buildo/Buildo/OnboardingVc's/Design.swift"; sourceTree = "<group>"; };
+		EFF7981222EF6742001CE26D /* CreateIssue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateIssue.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				EF03D4B822EE7EC300A01648 /* New Group1 */,
 				EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */,
 				EF0A69A322ECDBF6004115F4 /* Main.storyboard */,
+				EFF7981222EF6742001CE26D /* CreateIssue.storyboard */,
 				EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */,
 				EF03D4AF22EE6EF600A01648 /* New Group */,
 				EF0A69A622ECDC1B004115F4 /* Assets.xcassets */,
@@ -178,6 +181,7 @@
 			files = (
 				EFF49FB122ED042600363D1C /* SF-Pro-Display-Medium.otf in Resources */,
 				EF0A69AA22ECDC1B004115F4 /* LaunchScreen.storyboard in Resources */,
+				EFF7981322EF6742001CE26D /* CreateIssue.storyboard in Resources */,
 				EF0A69A722ECDC1B004115F4 /* Assets.xcassets in Resources */,
 				EF0A69A522ECDBF6004115F4 /* Main.storyboard in Resources */,
 			);
