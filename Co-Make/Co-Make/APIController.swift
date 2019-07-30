@@ -65,11 +65,12 @@ class ApiController {
             
             }.resume()
         
-        createUser(userID: <#T##Int#>, username: <#T##String#>, email: <#T##String#>, password: <#T##String#>, zipCode: <#T##Int#>)
+        // createuser
     }
     
+   
     
-    func saveUser(userID: Int, username: String, email: String, password: String, zipCode: Int) {
+    func createUser(userID: Int, username: String, email: String, password: String, zipCode: Int) {
         let user = User(userID: userID, username: username, email: email, password: password, zipCode: zipCode)
         do {
             try CoreDataStack.shared.save()
