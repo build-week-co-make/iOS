@@ -17,6 +17,7 @@ class FeedViewController: UIViewController {
     @IBOutlet var userAddress: UILabel!
     
     @IBOutlet var issuesTableView: UITableView!
+    @IBOutlet var feedTabBarItem: UITabBarItem!
     
     @IBOutlet var searchIssues: UISearchBar!
     
@@ -25,7 +26,12 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     searchIssues.cornerRadius = 20
+        feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+        
+        feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for:.selected)
+        
+       
+        searchIssues.cornerRadius = 20
     userImage.image = UIImage(named: "sign-in-4")
      userImage.cornerRadius = 23
         
