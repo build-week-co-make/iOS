@@ -28,6 +28,8 @@ class ApiController {
     
     // MARK: - User data functions
     
+    // MARK: - Creating user data
+    
     func signUp(with user: User, completion: @escaping (Error?) -> Void = { _ in }) {
         let signUpUrl = baseURL.appendingPathComponent("auth/register")
         
@@ -64,8 +66,8 @@ class ApiController {
     }
     
     
-    func createUser(username: String, email: String, password: String, zipCode: Int32) {
-        let user = User(username: username, email: email, password: password, zipCode: zipCode)
+    func createUser(userID: Int, username: String, email: String, password: String, zipCode: Int) {
+        let user = User(userID: userID, username: username, email: email, password: password, zipCode: zipCode)
         do {
             try CoreDataStack.shared.save()
         } catch {
@@ -74,6 +76,7 @@ class ApiController {
         signUp(with: user)
     }
     
+    // MARK: - Signing in with user data
     
     func signIn(with email: String, password: String, completion: @escaping (Error?) -> Void = { _ in }) {
         let signInURL = baseURL.appendingPathComponent("auth/login")
@@ -131,6 +134,8 @@ class ApiController {
             }.resume()
     }
     
+    // MARK: - Editing user data
+    
     func editUser(user: User, username: String? = nil, email: String, password: String, zipCode: Int32) {
         
         user.username = username
@@ -175,7 +180,7 @@ class ApiController {
         user.username = representation.username
         user.email = representation.email
         user.password = representation.password
-        user.zipCode = representation.zipCode
+        user.zipCode = Int32(representation.zipCode)
     }
     
     
@@ -229,7 +234,63 @@ class ApiController {
     
     // MARK: - Issue data functions
     
-    func createIssue(userID: Int32, zipCode: Int32, issueName: String, description: String, category: String) {
+    func fetchIssuesFromServer(completion: @escaping (Error?) -> Void = { _ in }) {
+        let requestURL = baseURL.appendingPathComponent("issues")
+        
+        URLSession.shared.dataTask(with: requestURL) { (data, _, error) in
+            if let error = error {
+                NSLog("Error fetching tasks: \(error)")
+                completion(error)
+                return
+            }
+            
+            guard let data = data else {
+                NSLog("No data returned from data task")
+                completion(error)
+                return }
+            
+            do {
+                let issues = try JSONDecoder().decode(Issue.self, from: data)
+               
+                completion(nil)
+                
+            } catch {
+                NSLog("Error decoding task representations: \(error)")
+                completion(nil)
+                return
+            }
+            }.resume()
+    }
+    
+    
+    func put(issue: Issue, completion: @escaping (Error?) -> Void = { _ in }) {
+        
+        let userID = issue.userID
+        let requestURL = baseURL.appendingPathComponent("issues")
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "PUT"
+        
+        do {
+            request.httpBody = try JSONEncoder().encode(issue)
+        } catch {
+            NSLog("Error ecoding movie: \(issue) \(error)")
+            completion(error)
+            return
+        }
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            if let error = error {
+                NSLog("Error putting to the server")
+                completion(error)
+                return
+            }
+            completion(nil)
+            }.resume()
+        
+        
+        
+    }
+    
+    func createIssue(userID: Issue.userID, zipCode: Int, issueName: Issue.issueName, description: String, category: String) {
         let issue = Issue(userID: userID, zipCode: zipCode, issueName: issueName, description: description, category: category)
         
         do {
@@ -240,5 +301,15 @@ class ApiController {
         
         }
     
+    func commentOnIssue(issueID: Int, userID: Int, comment: String, completion: @escaping (Error?) -> Void = { _ in }) {
+        let requestURL = baseURL.appendingPathComponent("comments")
+        
+        
+    }
     
+    func fetchSingleIssueWithComments(issueID: Int, completion: @escaping (Error?) -> Void = { _ in }) {
+        let requestURL = baseURL.appendingPathComponent("issues")
+        
+    }
+
 }

@@ -11,20 +11,22 @@ import CoreData
 
 extension User {
     
-    @discardableResult convenience init(username: String? = nil, email: String, password: String, zipCode: Int32, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+    @discardableResult convenience init(userID: Int, username: String? = nil, email: String, password: String, zipCode: Int, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         
         self.init(context: context)
         
+        self.userID = Int32.init(userID)
         self.username = username
         self.email = email
         self.password = password
-        self.zipCode = zipCode
+        self.zipCode = Int32.init(zipCode)
     }
     
     @discardableResult convenience init?(userRepresentation: UserRepresentation, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         
         self.init(context: context)
         
+        self.userID = userID
         self.username = userRepresentation.username
         self.email = userRepresentation.email
         self.password = userRepresentation.password
@@ -37,7 +39,7 @@ extension User {
             let email = email,
             let password = password else { return nil }
         
-        return UserRepresentation(username: username, email: email, password: password, zipCode: zipCode)
+        return UserRepresentation(userID: Int(userID), username: username, email: email, password: password, zipCode: Int(zipCode))
     }
     
 }
