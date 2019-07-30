@@ -20,7 +20,9 @@ class CreateIssueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        takePhotoButton.layer.cornerRadius = 5.0
+        addPhotoButton.layer.cornerRadius = 5.0
         pickerController.sourceType = UIImagePickerController.SourceType.camera
         pickerController.delegate = self
     }
