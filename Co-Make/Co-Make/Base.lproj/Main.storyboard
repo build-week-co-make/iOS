@@ -53,11 +53,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gf-N7-Nx8">
-                                        <rect key="frame" x="33" y="105" width="349" height="87"/>
+                                        <rect key="frame" x="33" y="105" width="349" height="88.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Whether it's potholes, overgrown weeds, imporper road signs, or anything else, Comake is the place to make your voice heard.">
                                                 <attributes>
-                                                    <font key="NSFont" size="14" name="SFProDisplay-Regular"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="19" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -65,7 +65,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="c0w-Wo-cKz">
+<<<<<<< HEAD
+                                        <rect key="frame" x="149" y="238.5" width="116" height="28"/>
+=======
                                         <rect key="frame" x="149" y="237" width="116" height="16"/>
+>>>>>>> development
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,12 +138,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEU-47-X8S">
-                                        <rect key="frame" x="33" y="132" width="349" height="52"/>
+                                        <rect key="frame" x="33" y="132" width="349" height="52.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Neighbors and community members share and upvote posted issues. ">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="SFProDisplay-ThinItalic"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                     <real key="NSKern" value="0.0"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="19" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                         <tabStops/>
@@ -152,7 +156,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="IfA-TC-9h3">
+<<<<<<< HEAD
+                                        <rect key="frame" x="149" y="229.5" width="116" height="28"/>
+=======
                                         <rect key="frame" x="149" y="229" width="116" height="16"/>
+>>>>>>> development
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -228,7 +236,7 @@
                                                 <string key="content">Issues with most upvotes get resolved first by local government and Homeowners’ Associations (plus you get rewarded for helping out your community!)</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="SFProDisplay-Medium"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                     <real key="NSKern" value="0.0"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="19" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                         <tabStops/>
@@ -241,7 +249,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-v7-vBo">
+<<<<<<< HEAD
+                                        <rect key="frame" x="149" y="235.5" width="116" height="16"/>
+=======
                                         <rect key="frame" x="149" y="235.5" width="116" height="28"/>
+>>>>>>> development
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -357,7 +369,7 @@
                                         <state key="normal" title="Button" image="Component"/>
                                         <connections>
                                             <action selector="signUpButtonTapped:" destination="kww-DH-BS9" eventType="touchUpInside" id="cMs-Is-ZRN"/>
-                                            <segue destination="J0H-tH-Dc2" kind="presentation" id="Atx-RI-8Rg"/>
+                                            <segue destination="J0H-tH-Dc2" kind="presentation" identifier="AddLocation" id="Atx-RI-8Rg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uR-dn-tf7">
@@ -373,7 +385,7 @@
                                             <fragment content="By signing up you agree to Terms of Service and Privacy Policy.">
                                                 <attributes>
                                                     <color key="NSColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="12" name="SFProDisplay-Regular"/>
+                                                    <font key="NSFont" metaFont="cellTitle"/>
                                                     <real key="NSKern" value="0.0"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                         <tabStops/>
@@ -471,18 +483,26 @@
                                 <rect key="frame" x="50" y="151" width="314" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Welcome, Robert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zo-RS-Ewr">
+<<<<<<< HEAD
+                                <rect key="frame" x="82" y="518" width="251" height="40"/>
+=======
                                 <rect key="frame" x="82" y="193" width="251" height="41"/>
+>>>>>>> development
                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRz-iE-1ka">
+<<<<<<< HEAD
+                                <rect key="frame" x="10" y="610" width="394" height="64.5"/>
+=======
                                 <rect key="frame" x="10" y="286" width="394" height="63.5"/>
+>>>>>>> development
                                 <attributedString key="attributedText">
                                     <fragment content="Add your address so that you can start fixing up your neighbourhood!">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="19" name="SFProDisplay-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="19"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="19" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -498,7 +518,7 @@
                                 <rect key="frame" x="100" y="401" width="214" height="396"/>
                                 <state key="normal" title="Button" image="Group 2"/>
                                 <connections>
-                                    <segue destination="Vax-Jh-GC5" kind="show" id="lIW-bL-QQX"/>
+                                    <segue destination="Vax-Jh-GC5" kind="show" identifier="FindLocation" id="lIW-bL-QQX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -557,7 +577,7 @@
                                     <fragment content="Comake needs to know your location so you can post issues affecting your neighbourhood. ">
                                         <attributes>
                                             <color key="NSColor" red="0.41965418781725883" green="0.41965418781725883" blue="0.41965418781725883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="SFProDisplay-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="19" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1385,7 +1405,7 @@
                                             <fragment content="By signing up you agree to Terms of Service and Privacy Policy.">
                                                 <attributes>
                                                     <color key="NSColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="12" name="SFProDisplay-Regular"/>
+                                                    <font key="NSFont" metaFont="cellTitle"/>
                                                     <real key="NSKern" value="0.0"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                         <tabStops/>
