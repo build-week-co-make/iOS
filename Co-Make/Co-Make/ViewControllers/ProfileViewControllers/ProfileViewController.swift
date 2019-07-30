@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var userName: UILabel!
     
+    @IBOutlet var feedTabBarItem: UITabBarItem!
     
     @IBOutlet var zipcode: UILabel!
     
@@ -28,6 +29,17 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      
+        
+        feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+        
+        feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for:.selected)
+        
+        
+        
+        
+        
+        
         coreView.cornerRadius = 15
 coreView.shadowOffset = CGSize(width: 0, height: 2)
         coreView.shadowRadius = 3

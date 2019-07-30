@@ -826,8 +826,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tRg-qO-tDG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" image="feed" selectedImage="feed" id="yvJ-5o-kYO"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="grayFeedIcon" selectedImage="feed" id="yvJ-5o-kYO"/>
                     <connections>
+                        <outlet property="feedTabBarItem" destination="yvJ-5o-kYO" id="jW8-cu-4Gb"/>
                         <outlet property="issuesTableView" destination="Cy1-2m-wPu" id="UrR-Fu-dyL"/>
                         <outlet property="searchIssues" destination="zMb-yf-sUv" id="Jxx-Z8-pM7"/>
                         <outlet property="userActualName" destination="mgH-Cg-fv0" id="BZt-jB-EcZ"/>
@@ -1306,9 +1307,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="go4-IT-3AM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profile" id="1HP-04-gnM"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" landscapeImage="blueProfileTabIcon" selectedImage="blueProfileTabIcon" id="1HP-04-gnM"/>
                     <connections>
                         <outlet property="coreView" destination="mwI-OM-zvB" id="ghP-lg-hBz"/>
+                        <outlet property="feedTabBarItem" destination="1HP-04-gnM" id="amO-c1-guH"/>
                         <outlet property="numberOfPosts" destination="YG4-xP-6E3" id="yGp-cX-Fnp"/>
                         <outlet property="numberOfVotes" destination="ZXv-9a-JQD" id="cms-MS-1sO"/>
                         <outlet property="smallView" destination="sSo-m8-ou4" id="Wur-O3-4sy"/>
@@ -1502,8 +1504,10 @@
         <image name="bermuda-success" width="297" height="392"/>
         <image name="bermuda-welcome" width="297" height="341"/>
         <image name="blueDesign" width="351" height="259"/>
+        <image name="blueProfileTabIcon" width="21" height="22"/>
         <image name="feed" width="20" height="22"/>
         <image name="feedGraphic" width="451" height="311"/>
+        <image name="grayFeedIcon" width="20" height="22"/>
         <image name="iPhone Copy" width="297" height="612"/>
         <image name="ic_map_marker" width="14" height="16"/>
         <image name="iconfinder_square-facebook_317727" width="32" height="32"/>
