@@ -8,23 +8,50 @@
 
 import Foundation
 
+// MARK: - Issue
 struct Issue: Codable {
+    let id, userID, zipCode: Int
+    let issueName, issueDescription, category: String
+    let volunteer, completed, openForVoting: Bool
+    let picture: JSONNull?
     
-    var userID: userID
-    var zipCode: Int
-    var issueName: issueName
-    var description: String
-    var category: String
+    enum CodingKeys: String, CodingKey {
+        case id
+        case userID = "user_id"
+        case zipCode
+        case issueName = "issue_name"
+        case issueDescription = "description"
+        case category, volunteer, completed
+        case openForVoting = "open_for_voting"
+        case picture
+    }
+}
+
+// MARK: - Encode/decode helpers
+
+class JSONNull: Codable, Hashable {
     
-    
-    
-    struct userID: Codable {
-        let user_id: Int
+    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
+        return true
+    }
+    func hash(into hasher: inout Hasher) {
+        var hashValue: Int {
+            return 0
+        }
     }
     
-    struct issueName: Codable {
-        let issue_name: String
-        
+   
+    public init() {}
+    
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if !container.decodeNil() {
+            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+        }
     }
     
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encodeNil()
+    }
 }

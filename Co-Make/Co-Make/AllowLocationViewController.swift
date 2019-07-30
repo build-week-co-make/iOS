@@ -49,6 +49,7 @@ class AllowLocationViewController: UIViewController, CLLocationManagerDelegate {
                     zipCode = place[0].postalCode!
                     
                     // Assign zipcode to user here.
+                    // Convert to Int when assigning.
 //                    user.zipcode = zipCode
                     print(zipCode)
                     
