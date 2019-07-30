@@ -10,10 +10,10 @@ import Foundation
 
 struct UserRepresentation: Equatable, Codable {
 
-    var name: String
+    var username: String?
     var email: String
     var password: String
-    var zipCode: String
+    var zipCode: Int32
 }
 
 

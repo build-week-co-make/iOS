@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class ApiController {
     
@@ -25,7 +26,7 @@ class ApiController {
     
     private let baseURL = URL(string: "https://co-make.herokuapp.com")!
     
-    func signUp(with user: User, completion: @escaping (Error?) -> ()) {
+    func signUp(with user: User, completion: @escaping (Error?) -> Void = { _ in }) {
         let signUpUrl = baseURL.appendingPathComponent("auth/register")
         
         var request = URLRequest(url: signUpUrl)
@@ -60,11 +61,29 @@ class ApiController {
             }.resume()
     }
     
-    func signIn(with user: UserAuthentication, completion: @escaping (Error?) -> ()) {
+    
+    func createUser(username: String, email: String, password: String, zipCode: Int32) {
+        let user = User(username: username, email: email, password: password, zipCode: zipCode)
+        do {
+            try CoreDataStack.shared.save()
+        } catch {
+            NSLog("Error saving context: \(error)")
+        }
+        signUp(with: user)
+    }
+    
+    
+    func signIn(with email: String, password: String, completion: @escaping (Error?) -> Void = { _ in }) {
         let signInURL = baseURL.appendingPathComponent("oauth/token")
+        
+        let userParameters: [String : String ] = [
+            "email" : email,
+            "password" : password
+        ]
         
         var request = URLRequest(url: signInURL)
         request.httpMethod = "POST"
+        
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
        
         
@@ -72,7 +91,7 @@ class ApiController {
         
         let jsonEncoder = JSONEncoder()
         do {
-            let jsonData = try jsonEncoder.encode(user)
+            let jsonData = try jsonEncoder.encode(userParameters)
              request.httpBody = jsonData
         } catch {
             print("Error encoding user object: \(error)")
@@ -110,6 +129,101 @@ class ApiController {
             }.resume()
     }
     
+    func editUser(user: User, username: String? = nil, email: String, password: String, zipCode: Int32) {
+        
+        user.username = username
+        user.email = email
+        user.password = password
+        user.zipCode = zipCode
+        
+        
+//        updateUserInfo(with: user)
+        
+        do {
+            try CoreDataStack.shared.save()
+        } catch {
+            NSLog("Error saving context: \(error)")
+        }
+        
+        
+        
+    }
+    
+    private func updateUser(with representation: [UserRepresentation], context: NSManagedObjectContext) throws {
+        
+        var error: Error? = nil
+        
+        context.performAndWait {
+            for userRep in representation {
+               
+                // MARK: - Left off here
+                
+                
+            }
+            
+            do {
+                try context.save()
+            } catch let saveError {
+                error = saveError
+            }
+        }
+        
+        if let error = error { throw error }
+        
+        
+    }
+    
+    private func update(user: User, with representation: UserRepresentation) {
+        user.username = representation.username
+        user.email = representation.email
+        user.password = representation.password
+        user.zipCode = representation.zipCode
+    }
+    
+    
+//    func updateUserInfo(with user: User, completion: @escaping(Result<User, NetworkError>) -> Void = { _ in }) {
+//        guard let bearer = bearer else {
+//            completion(.failure(.noAuth))
+//            return
+//        }
+//
+//        guard let email = user.email,
+//            let password = user.password else { return }
+//
+//        let userDataURL = baseURL.appendingPathComponent("users/1")
+//        var request = URLRequest(url: userDataURL)
+//        request.httpMethod = "PUT"
+//        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+//
+//
+//        do {
+//            guard var representation = user.userRepresentation else { return }
+//
+//            representation.email = email
+//            representation.password = password
+//            do {
+//                try CoreDataStack.shared.save()
+//            } catch {
+//                NSLog("Error saving context: \(error)")
+//            }
+//            request.httpBody = try JSONEncoder().encode(representation)
+//        } catch {
+//            NSLog("Error encoding user \(user): \(error)")
+//            completion(.failure(.otherError))
+//            return
+//        }
+//
+//        URLSession.shared.dataTask(with: request) { data, response, error in
+//
+//            if let error = error {
+//                NSLog("Error putting new user data to server: \(error)")
+//                completion(.failure(.otherError))
+//                return
+//            }
+//
+//            } .resume()
+//    }
+//
     
     
     
