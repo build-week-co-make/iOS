@@ -26,6 +26,8 @@ class ApiController {
     
     private let baseURL = URL(string: "https://co-make.herokuapp.com")!
     
+    // MARK: - User data functions
+    
     func signUp(with user: User, completion: @escaping (Error?) -> Void = { _ in }) {
         let signUpUrl = baseURL.appendingPathComponent("auth/register")
         
@@ -74,7 +76,7 @@ class ApiController {
     
     
     func signIn(with email: String, password: String, completion: @escaping (Error?) -> Void = { _ in }) {
-        let signInURL = baseURL.appendingPathComponent("oauth/token")
+        let signInURL = baseURL.appendingPathComponent("auth/login")
         
         let userParameters: [String : String ] = [
             "email" : email,
@@ -137,8 +139,6 @@ class ApiController {
         user.zipCode = zipCode
         
         
-//        updateUserInfo(with: user)
-        
         do {
             try CoreDataStack.shared.save()
         } catch {
@@ -156,8 +156,6 @@ class ApiController {
         context.performAndWait {
             for userRep in representation {
                
-                // MARK: - Left off here
-                
                 
             }
             
@@ -179,6 +177,8 @@ class ApiController {
         user.password = representation.password
         user.zipCode = representation.zipCode
     }
+    
+    
     
     
 //    func updateUserInfo(with user: User, completion: @escaping(Result<User, NetworkError>) -> Void = { _ in }) {
@@ -225,6 +225,20 @@ class ApiController {
 //    }
 //
     
+    
+    
+    // MARK: - Issue data functions
+    
+    func createIssue(userID: Int32, zipCode: Int32, issueName: String, description: String, category: String) {
+        let issue = Issue(userID: userID, zipCode: zipCode, issueName: issueName, description: description, category: category)
+        
+        do {
+        try CoreDataStack.shared.save()
+        } catch {
+        NSLog("Error saving context: \(error)")
+        }
+        
+        }
     
     
 }
