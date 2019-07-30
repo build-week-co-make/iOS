@@ -123,17 +123,71 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGl-aN-knf">
-                                <rect key="frame" x="30" y="695" width="164" height="48"/>
+                                <rect key="frame" x="30" y="745" width="164" height="48"/>
                                 <state key="normal" image="addViewSaveImage"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHL-IF-jcB">
-                                <rect key="frame" x="221" y="695" width="163" height="48"/>
+                                <rect key="frame" x="221" y="745" width="163" height="48"/>
                                 <state key="normal" image="addViewCreateButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc3-6X-ZhH">
+                                <rect key="frame" x="30" y="678" width="164" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="JnO-Uq-rBP"/>
+                                    <constraint firstAttribute="width" constant="164" id="aRX-WE-9dD"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="0.65337281561536253" green="0.6488887397357439" blue="0.99900856600253807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.65337281560000005" green="0.64888873970000005" blue="0.99900856599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePhotoButtonTapped:" destination="S5i-jJ-5NT" eventType="touchUpInside" id="f80-kg-G8q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJL-b2-cmD">
+                                <rect key="frame" x="220" y="678" width="164" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="VkV-Pd-oaV"/>
+                                    <constraint firstAttribute="height" constant="48" id="f0k-tw-RY6"/>
+                                </constraints>
+                                <state key="normal" title="Add Photo">
+                                    <color key="titleColor" red="0.65337281560000005" green="0.64888873970000005" blue="0.99900856599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.65337281560000005" green="0.64888873970000005" blue="0.99900856599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94731390523555981" green="0.95406838201639077" blue="0.97433181235888322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kqH-10-2ex" firstAttribute="top" secondItem="5lQ-wS-5qq" secondAttribute="top" id="24A-oC-LIM"/>
+                            <constraint firstItem="ZHL-IF-jcB" firstAttribute="top" secondItem="MJL-b2-cmD" secondAttribute="bottom" constant="19" id="Arn-ws-vbi"/>
                             <constraint firstItem="ZHL-IF-jcB" firstAttribute="leading" secondItem="mGl-aN-knf" secondAttribute="trailing" constant="27" id="CQ4-VG-zuT"/>
                             <constraint firstItem="mGl-aN-knf" firstAttribute="centerY" secondItem="ZHL-IF-jcB" secondAttribute="centerY" id="EUm-cW-stP"/>
                             <constraint firstItem="mGl-aN-knf" firstAttribute="leading" secondItem="WtZ-MT-hYb" secondAttribute="leading" constant="30" id="G4R-tq-QQo"/>
@@ -147,8 +201,11 @@
                             <constraint firstItem="DKE-Kx-fGy" firstAttribute="leading" secondItem="WtZ-MT-hYb" secondAttribute="leading" id="UEU-nE-uVd"/>
                             <constraint firstItem="kqH-10-2ex" firstAttribute="leading" secondItem="WtZ-MT-hYb" secondAttribute="leading" id="Zp4-Cr-6md"/>
                             <constraint firstItem="WtZ-MT-hYb" firstAttribute="trailing" secondItem="WyT-Cy-Z8R" secondAttribute="trailing" constant="20" id="cow-qC-wtj"/>
+                            <constraint firstItem="mGl-aN-knf" firstAttribute="top" secondItem="Wc3-6X-ZhH" secondAttribute="bottom" constant="19" id="i7A-eF-qHY"/>
                             <constraint firstItem="bLf-Vk-NJ7" firstAttribute="leading" secondItem="WtZ-MT-hYb" secondAttribute="leading" id="uCW-bI-jvF"/>
-                            <constraint firstItem="WtZ-MT-hYb" firstAttribute="bottom" secondItem="ZHL-IF-jcB" secondAttribute="bottom" constant="70" id="wV8-5r-rXB"/>
+                            <constraint firstItem="WtZ-MT-hYb" firstAttribute="trailing" secondItem="MJL-b2-cmD" secondAttribute="trailing" constant="30" id="v5X-Dk-tEC"/>
+                            <constraint firstItem="MJL-b2-cmD" firstAttribute="leading" secondItem="Wc3-6X-ZhH" secondAttribute="trailing" constant="26" id="w64-Wr-F5n"/>
+                            <constraint firstItem="WtZ-MT-hYb" firstAttribute="bottom" secondItem="ZHL-IF-jcB" secondAttribute="bottom" constant="20" id="wV8-5r-rXB"/>
                             <constraint firstItem="WtZ-MT-hYb" firstAttribute="trailing" secondItem="zBR-e7-zRJ" secondAttribute="trailing" constant="20" id="x0l-Q7-Gkh"/>
                             <constraint firstItem="WyT-Cy-Z8R" firstAttribute="top" secondItem="18T-ye-xEq" secondAttribute="bottom" constant="17.5" id="xtf-Lm-OX9"/>
                         </constraints>
@@ -156,6 +213,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="add" selectedImage="add" id="Q2i-TB-b7t"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="MJL-b2-cmD" id="AFb-wx-baf"/>
+                        <outlet property="issueImageView" destination="18T-ye-xEq" id="8Bz-Ie-udn"/>
+                        <outlet property="takePhotoButton" destination="Wc3-6X-ZhH" id="j9X-Us-aQg"/>
+                        <outlet property="titleTextField" destination="PpT-cl-KdV" id="ybh-Ql-d4a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqM-g0-G3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
