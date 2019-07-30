@@ -239,5 +239,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Co-Make/ViewControllers/FeedIDetailViewControllers/IssueVIewController.swift"
+            timestampString = "586200482.03852"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "IssueVIewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Co_Make.IssueVIewController.images.getter : Swift.Array&lt;Swift.Optional&lt;__C.UIImage&gt;&gt;"
+                  moduleName = "Co-Make"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luqmaankhan/Desktop/github/iOS/Co-Make/Co-Make/ViewControllers/FeedIDetailViewControllers/IssueVIewController.swift"
+                  timestampString = "586149017.693202"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Co_Make.IssueVIewController.images.setter : Swift.Array&lt;Swift.Optional&lt;__C.UIImage&gt;&gt;"
+                  moduleName = "Co-Make"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luqmaankhan/Desktop/github/iOS/Co-Make/Co-Make/ViewControllers/FeedIDetailViewControllers/IssueVIewController.swift"
+                  timestampString = "586149017.696133"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Co_Make.IssueVIewController.images.modify : Swift.Array&lt;Swift.Optional&lt;__C.UIImage&gt;&gt;"
+                  moduleName = "Co-Make"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luqmaankhan/Desktop/github/iOS/Co-Make/Co-Make/ViewControllers/FeedIDetailViewControllers/IssueVIewController.swift"
+                  timestampString = "586149017.698938"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Co_Make.IssueVIewController.images.modify : Swift.Array&lt;Swift.Optional&lt;__C.UIImage&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Co-Make"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luqmaankhan/Desktop/github/iOS/Co-Make/Co-Make/ViewControllers/FeedIDetailViewControllers/IssueVIewController.swift"
+                  timestampString = "586149017.701515"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Co_Make.IssueVIewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Co_Make.IssueVIewController"
+                  moduleName = "Co-Make"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luqmaankhan/Desktop/github/iOS/Co-Make/Co-Make/ViewControllers/FeedIDetailViewControllers/IssueVIewController.swift"
+                  timestampString = "586149017.704425"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "375">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Co_Make.IssueVIewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Co_Make.IssueVIewController&gt;"
+                  moduleName = "Co-Make"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luqmaankhan/Desktop/github/iOS/Co-Make/Co-Make/ViewControllers/FeedIDetailViewControllers/IssueVIewController.swift"
+                  timestampString = "586149017.707181"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "295">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

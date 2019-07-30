@@ -31,14 +31,14 @@ class ApiController {
     // MARK: - Creating user data
     
     // Call in Allow Location
-    func signUp(with user: User, completion: @escaping (Error?) -> Void = { _ in }) {
+    func signUp(with user: User, completion: @escaping (UserRepresentation?, Error?) -> Void = { _,_  in }) {
         let signUpUrl = baseURL.appendingPathComponent("auth/register")
         
         var request = URLRequest(url: signUpUrl)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-type")
         
-        guard let representation = user.userRepresentation else { completion(NSError()); return }
+        guard let representation = user.userRepresentation else { completion(nil, NSError()); return }
         
         let jsonEncoder = JSONEncoder()
         do {
@@ -46,22 +46,44 @@ class ApiController {
             request.httpBody = jsonData
         } catch {
             print("Error encoding user object: \(error)")
-            completion(error)
+            completion(nil, error)
             return
         }
         
-        URLSession.shared.dataTask(with: request) { _, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 {
-                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                completion(nil, NSError(domain: "", code: response.statusCode, userInfo: nil))
                 return
             }
             
             if let error = error {
-                completion(error)
+                completion(nil, error)
                 return
             }
-            completion(nil)
+            
+            // Data Decode
+            
+            guard let data = data else { return }
+            do {
+                
+                let jsonDecoder = JSONDecoder()
+                let results = try jsonDecoder.decode(UserRepresentation.self, from: data)
+                
+                // Use function to add user to core data
+                createUser(userID: results.userID, username: results.username!, email: results.email, password: results.password, zipCode: results.zipCode)
+                
+                
+                completion(results, nil)
+            }
+            
+            catch {
+                NSLog("Error decoding user: \(error)")
+                completion(nil, error)
+                return
+            }
+            
+            completion(nil, error)
             
             }.resume()
         
