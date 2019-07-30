@@ -15,7 +15,6 @@
 		EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */; };
 		EF03D4B322EE7A9000A01648 /* UserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */; };
 		EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B422EE7B0000A01648 /* APIController.swift */; };
-		EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B622EE7E6200A01648 /* Bearer.swift */; };
 		EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */; };
 		EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */; };
 		EF0A69A522ECDBF6004115F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A322ECDBF6004115F4 /* Main.storyboard */; };
@@ -30,6 +29,7 @@
 		EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981622EF877E001CE26D /* IssueVIewController.swift */; };
 		EFF7981922EF8E81001CE26D /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981822EF8E81001CE26D /* Design.swift */; };
 		EFF7981D22EFAF82001CE26D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7981C22EFAF82001CE26D /* ImageCell.swift */; };
+		EFF7982222EFD729001CE26D /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF7982122EFD729001CE26D /* Bearer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,6 @@
 		EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentation.swift; sourceTree = "<group>"; };
 		EF03D4B422EE7B0000A01648 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
-		EF03D4B622EE7E6200A01648 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Bearer.swift; path = "../New Group/Bearer.swift"; sourceTree = "<group>"; };
 		EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		EF0A699C22ECDBF6004115F4 /* Co-Make.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Co-Make.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		EFF7981622EF877E001CE26D /* IssueVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVIewController.swift; sourceTree = "<group>"; };
 		EFF7981822EF8E81001CE26D /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		EFF7981C22EFAF82001CE26D /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		EFF7982122EFD729001CE26D /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,34 +71,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF03D4AF22EE6EF600A01648 /* New Group */ = {
+		EF03D4AF22EE6EF600A01648 /* OnboardingAndLogin */ = {
 			isa = PBXGroup;
 			children = (
 				EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */,
 				EFF49FB622ED372D00363D1C /* LoginViewController.swift */,
 				EFF49FB822ED373F00363D1C /* SignUpViewController.swift */,
 				EFF49FB422ED07E200363D1C /* PageViewController.swift */,
+				EFF7981822EF8E81001CE26D /* Design.swift */,
 			);
-			path = "New Group";
+			path = OnboardingAndLogin;
 			sourceTree = "<group>";
 		};
-		EF03D4B822EE7EC300A01648 /* New Group1 */ = {
+		EF03D4B822EE7EC300A01648 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */,
+				EFF7982122EFD729001CE26D /* Bearer.swift */,
 				EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */,
-				EF03D4B622EE7E6200A01648 /* Bearer.swift */,
 				6FC1726B22EF92F5007A380C /* User+Convenience.swift */,
 				6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */,
 				6FC1726922EF9186007A380C /* CoreDataStack.swift */,
 			);
-			path = "New Group1";
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EF0A699322ECDBF5004115F4 = {
 			isa = PBXGroup;
 			children = (
-				EFF7981822EF8E81001CE26D /* Design.swift */,
 				EF0A699E22ECDBF6004115F4 /* Co-Make */,
 				EF0A699D22ECDBF6004115F4 /* Products */,
 			);
@@ -116,16 +116,12 @@
 			isa = PBXGroup;
 			children = (
 				EF03D4B422EE7B0000A01648 /* APIController.swift */,
-				EF03D4B822EE7EC300A01648 /* New Group1 */,
+				EF03D4B822EE7EC300A01648 /* Models */,
 				EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */,
 				EF0A69A322ECDBF6004115F4 /* Main.storyboard */,
-				EFF7981622EF877E001CE26D /* IssueVIewController.swift */,
-				EFF7981C22EFAF82001CE26D /* ImageCell.swift */,
-				EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */,
 				EFF7981222EF6742001CE26D /* CreateIssue.storyboard */,
-				A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */,
-				EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */,
-				EF03D4AF22EE6EF600A01648 /* New Group */,
+				EFF7981E22EFD495001CE26D /* ViewControllers */,
+				EF03D4AF22EE6EF600A01648 /* OnboardingAndLogin */,
 				EF0A69A622ECDC1B004115F4 /* Assets.xcassets */,
 				EF0A69A822ECDC1B004115F4 /* LaunchScreen.storyboard */,
 				EF0A69AB22ECDC1B004115F4 /* Info.plist */,
@@ -140,6 +136,34 @@
 				EFF49FAF22ED02DD00363D1C /* SF-Pro-Display-Medium.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EFF7981E22EFD495001CE26D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFF7981F22EFD4CE001CE26D /* FeedIDetailViewControllers */,
+				EFF7982022EFD534001CE26D /* MainFeedViewControllers */,
+				A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EFF7981F22EFD4CE001CE26D /* FeedIDetailViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFF7981622EF877E001CE26D /* IssueVIewController.swift */,
+				EFF7981C22EFAF82001CE26D /* ImageCell.swift */,
+			);
+			path = FeedIDetailViewControllers;
+			sourceTree = "<group>";
+		};
+		EFF7982022EFD534001CE26D /* MainFeedViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFF7981422EF7E5F001CE26D /* IssueTableViewCell.swift */,
+				EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */,
+			);
+			path = MainFeedViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,12 +241,12 @@
 			files = (
 				6FC1726A22EF9186007A380C /* CoreDataStack.swift in Sources */,
 				EFF7981722EF877E001CE26D /* IssueVIewController.swift in Sources */,
+				EFF7982222EFD729001CE26D /* Bearer.swift in Sources */,
 				EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */,
 				EFF49FB722ED372D00363D1C /* LoginViewController.swift in Sources */,
 				A2D0F7DC22EF841800175F8C /* CreateIssueViewController.swift in Sources */,
 				EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */,
 				EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */,
-				EF03D4B722EE7E6200A01648 /* Bearer.swift in Sources */,
 				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
 				6FC1726C22EF92F5007A380C /* User+Convenience.swift in Sources */,
 				EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */,

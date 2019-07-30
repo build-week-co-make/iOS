@@ -13,5 +13,10 @@ class ImageCell: UICollectionViewCell {
 
     @IBOutlet var issueImage: UIImageView!
     
-
+    var image: UIImage! {
+        
+        didSet {
+            issueImage.image = image
+        }
+    }
 }
