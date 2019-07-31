@@ -292,16 +292,11 @@ class ApiController {
             completion(error)
             return
         }
-        URLSession.shared.dataTask(with: request) { (data, _, error) in
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
             if let error = error {
                 NSLog("Error posting issue to the server")
                 completion(error)
                 return
-                
-                guard let data = data else { return }
-                
-                
-//                completion(nil, error)
                 
             }
             completion(nil)
