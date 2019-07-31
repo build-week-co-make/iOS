@@ -35,6 +35,8 @@ class AllowLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func allowLocationTapped(_ sender: UIButton) {
         self.determineMyCurrentLocation()
         let sb = UIStoryboard(name: "Main", bundle: nil)
+        //call create user function from API controller
+        
         let mainView = sb.instantiateViewController(withIdentifier: "MainView")
         present(mainView, animated: true, completion: nil)
     
@@ -67,7 +69,7 @@ class AllowLocationViewController: UIViewController, CLLocationManagerDelegate {
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
-            //locationManager.startUpdatingHeading()
+            locationManager.startUpdatingHeading()
             
         }
     }

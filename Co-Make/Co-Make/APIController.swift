@@ -23,6 +23,8 @@ class ApiController {
     var bearer: Bearer?
     var issues: [Issue] = []
     
+    
+    
     private let baseURL = URL(string: "https://co-make.herokuapp.com")!
     
     // MARK: - User data functions
