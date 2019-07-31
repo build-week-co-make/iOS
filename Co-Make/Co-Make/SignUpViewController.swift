@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController {
         
         
     }
-    
+
     
     /*
      // MARK: - Navigation
@@ -35,7 +35,7 @@ class SignUpViewController: UIViewController {
      }
      */
     
-    
+
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
    
     }

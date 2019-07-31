@@ -23,6 +23,8 @@ class ApiController {
     var bearer: Bearer?
     var userAuthentication: UserAuthentication?
     
+    
+    
     private let baseURL = URL(string: "https://co-make.herokuapp.com")!
     
     func signUp(with user: User, completion: @escaping (Error?) -> ()) {
