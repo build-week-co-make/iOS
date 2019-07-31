@@ -15,7 +15,8 @@ class CreateIssueViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var zipCodeTextField: UITextField!
     
-//    let apiController: ApiController? 
+//    let apiController: ApiController?
+    var stringImage: String = ""
     let pickerController = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -32,7 +33,7 @@ class CreateIssueViewController: UIViewController {
     }
     
     @IBAction func postIssueButtonTapped(_ sender: UIButton) {
-        
+//        apiController?.createIssue(id: <#T##Int#>, userID: <#T##Int#>, zipCode: <#T##Int#>, issueName: <#T##String#>, description: <#T##String#>, category: <#T##String#>, volunteer: <#T##Bool#>, completed: <#T##Bool#>, openForVoting: <#T##Bool#>, picture: <#T##String?#>)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -40,8 +41,17 @@ class CreateIssueViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+//    func convertZIPCodeToInt() -> Int {
+//        if let zipCodeString = zipCodeTextField.text {
+//            if !zipCodeString.isEmpty {
+//
+//            }
+//        }
+//    }
     
-    
+    func convertToBase64(image: UIImage) -> String {
+        return image.pngData()!.base64EncodedString()
+    }
     
 }
 
@@ -54,8 +64,8 @@ extension CreateIssueViewController: UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        
         issueImageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        stringImage = convertToBase64(image: issueImageView.image!)
     }
 }
 
