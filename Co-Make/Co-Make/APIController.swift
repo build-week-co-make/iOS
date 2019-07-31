@@ -227,9 +227,9 @@ class ApiController {
     private func singleUser(for userID: Int, context: NSManagedObjectContext) -> User? {
         
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-//        let predicate = NSPredicate(format: "identifier == %@", uuid as NSUUID)
+        let predicate = NSPredicate(format: "userID == %@", userID)
         
-//        fetchRequest.predicate = predicate
+        fetchRequest.predicate = predicate
         
         var result: User? = nil
         
@@ -244,6 +244,22 @@ class ApiController {
             }
         }
         return result
+    }
+    
+    func deleteUserFromServer(_ user: User, completion: @escaping (Error?) -> Void = { _ in }) {
+        guard let email = user.email else {
+            completion(NSError())
+            return
+        }
+        
+        let requestURL = baseURL.appendingPathComponent("users").appendingPathExtension("\(user.userID)")
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "DELETE"
+        
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            print(response!)
+            completion(error)
+            }.resume()
     }
     
     
@@ -307,9 +323,11 @@ class ApiController {
     }
     
     // call on create issue page
-    func createIssue(id: Int, userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String? = nil) {
+    
+    // need a way to get id
+    func createIssue(id: Int? = nil,userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String? = nil) {
         
-       let issue = Issue(id: id, userID: userID, zipCode: zipCode, issueName: issueName, issueDescription: description, category: category, volunteer: volunteer, completed: completed, openForVoting: openForVoting, picture: picture)
+        let issue = Issue(id: id, userID: userID, zipCode: zipCode, issueName: issueName, issueDescription: description, category: category, volunteer: volunteer, completed: completed, openForVoting: openForVoting, picture: picture)
         
         putIssueOnServer(issue: issue)
         
@@ -320,11 +338,6 @@ class ApiController {
         guard let bearer = bearer else { return }
         let requestURL = baseURL.appendingPathComponent("comments")
         
-        let commentParameters: [String : Any] = [
-            "issue_id" : issueID,
-            "user_id" : userID,
-            "comment" : comment
-        ]
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = "POST"
@@ -332,10 +345,11 @@ class ApiController {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
+        let comment = Comment(issueID: issueID, userID: userID, comment: comment)
         
         let jsonEncoder = JSONEncoder()
         do {
-            let jsonData = try jsonEncoder.encode(commentParameters)
+            let jsonData = try jsonEncoder.encode(comment)
             request.httpBody = jsonData
         } catch {
             print("Error encoding user object: \(error)")
@@ -375,43 +389,73 @@ class ApiController {
         
         
     // Call when selecting table view cell on feed
-    func fetchSingleIssueWithComments(id: Int, completion: @escaping (Error?) -> Void = { _ in }) {
+    func fetchSingleIssueWithComments(id: Int, completion: @escaping (IssueWithComments?, Error?) -> Void = { _, _ in }) {
         let requestURL = baseURL.appendingPathComponent("issues/\(id)/withComments")
         
         URLSession.shared.dataTask(with: requestURL) { (data, _, error) in
             if let error = error {
                 NSLog("Error fetching tasks: \(error)")
-                completion(error)
+                completion(nil, error)
                 return
             }
             
             guard let data = data else {
                 NSLog("No data returned from data task")
-                completion(error)
+                completion(nil, error)
                 return }
             
             do {
                 let issue = try JSONDecoder().decode(IssueWithComments.self, from: data)
-                completion(nil)
+                completion(issue, error)
             } catch {
                 NSLog("Error decoding issues: \(error)")
-                completion(nil)
+                completion(nil, error)
                 return
             }
             }.resume()
     }
     
     func upvoteIssue(userID: Int, issueID: Int, completion: @escaping (Error?) -> Void = { _ in }) {
+        let requestURL = baseURL.appendingPathComponent("/upvotes/issue")
+        guard let bearer = bearer else { return }
         
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "POST"
         
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
+            if let error = error {
+                NSLog("Error upvoting issue")
+                completion(error)
+                return
+                
+            }
+            completion(nil)
+            }.resume()
         
     }
     
     func upvoteComment(userID: Int, commentID: Int, completion: @escaping (Error?) -> Void = { _ in }) {
+        let requestURL = baseURL.appendingPathComponent("/upvotes/comment")
+        guard let bearer = bearer else { return }
         
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "POST"
         
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
+            if let error = error {
+                NSLog("Error upvoting comment")
+                completion(error)
+                return
+                
+            }
+            completion(nil)
+            }.resume()
         
     }
 
