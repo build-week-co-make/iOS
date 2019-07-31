@@ -10,6 +10,9 @@
 		6FC1726822EF912F007A380C /* Co-Make.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */; };
 		6FC1726A22EF9186007A380C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726922EF9186007A380C /* CoreDataStack.swift */; };
 		6FC1726C22EF92F5007A380C /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726B22EF92F5007A380C /* User+Convenience.swift */; };
+
+		6FC1726E22F0D37B007A380C /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC1726D22F0D37B007A380C /* Issue.swift */; };
+
 		A2D0F7DC22EF841800175F8C /* CreateIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */; };
 		EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */; };
 		EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */; };
@@ -38,6 +41,9 @@
 		6FC1726722EF912F007A380C /* Co-Make.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Co-Make.xcdatamodel"; sourceTree = "<group>"; };
 		6FC1726922EF9186007A380C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		6FC1726B22EF92F5007A380C /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
+
+		6FC1726D22F0D37B007A380C /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+
 		A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueViewController.swift; sourceTree = "<group>"; };
 		EF03D4AB22EE2CDC00A01648 /* AllowLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllowLocationViewController.swift; path = ../AllowLocationViewController.swift; sourceTree = "<group>"; };
 		EF03D4AD22EE6DD400A01648 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,10 @@
 				EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */,
 				EFF7982122EFD729001CE26D /* Bearer.swift */,
 				EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */,
+
+				6FC1726D22F0D37B007A380C /* Issue.swift */,
+				EF03D4B622EE7E6200A01648 /* Bearer.swift */,
+
 				6FC1726B22EF92F5007A380C /* User+Convenience.swift */,
 				6FC1726622EF912F007A380C /* Co-Make.xcdatamodeld */,
 				6FC1726922EF9186007A380C /* CoreDataStack.swift */,
@@ -273,6 +283,7 @@
 				6FC1726822EF912F007A380C /* Co-Make.xcdatamodeld in Sources */,
 				EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */,
 				EF03D4B322EE7A9000A01648 /* UserRepresentation.swift in Sources */,
+				6FC1726E22F0D37B007A380C /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

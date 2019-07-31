@@ -10,10 +10,12 @@ import Foundation
 
 struct UserRepresentation: Equatable, Codable {
 
-    var name: String
+    var userID: Int
+    var username: String?
     var email: String
     var password: String
-    var zipCode: String
+    var zipCode: Int
+    
 }
 
 
@@ -22,7 +24,7 @@ struct UserRepresentations: Codable {
 }
 
 func == (lhs: UserRepresentation, rhs: User) -> Bool {
-    return lhs.email == rhs.email && lhs.password == rhs.password
+    return lhs.userID == rhs.userID && lhs.userID == rhs.userID
 }
 
 func == (lhs: User, rhs: UserRepresentation) -> Bool {
