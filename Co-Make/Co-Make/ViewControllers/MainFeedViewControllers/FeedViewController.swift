@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     @IBOutlet var userImage: UIImageView!
     
@@ -21,7 +22,31 @@ class FeedViewController: UIViewController {
     
     @IBOutlet var searchIssues: UISearchBar!
     
+    let apiController = ApiController()
+    
     let sampleData = ["sampledata"]
+    
+    lazy var fetchedResultsController: NSFetchedResultsController<User> = {
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        
+        let userIDDescriptor = NSSortDescriptor(key: "userID", ascending: false)
+        
+        
+        fetchRequest.sortDescriptors = [userIDDescriptor]
+        let moc = CoreDataStack.shared.mainContext
+        
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: "userID", cacheName: nil)
+        
+        frc.delegate = self
+        
+        do {
+            try frc.performFetch()
+        } catch {
+            fatalError("Error performing fetch: \(error)")
+        }
+        return frc
+    }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +61,23 @@ class FeedViewController: UIViewController {
         userImage.cornerRadius = 23
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        guard let userID = fetchedResultsController.fetchedObjects?[0].userID else {
+            
+            // Segue to sign up
+            return
+        }
+        
+        let user = fetchedResultsController.fetchedObjects?[0]
+        guard let email = user?.email,
+            let password = user?.password else { return }
+        apiController.signIn(with: email, password: password)
+        
+    }
+    
     
     
     /*
