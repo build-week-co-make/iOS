@@ -309,7 +309,7 @@ class ApiController {
     // call on create issue page
     
     // need a way to get id
-    func createIssue(id: Int,userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String? = nil) {
+    func createIssue(id: Int? = nil,userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String? = nil) {
         
         let issue = Issue(id: id, userID: userID, zipCode: zipCode, issueName: issueName, issueDescription: description, category: category, volunteer: volunteer, completed: completed, openForVoting: openForVoting, picture: picture)
         
@@ -404,16 +404,46 @@ class ApiController {
     }
     
     func upvoteIssue(userID: Int, issueID: Int, completion: @escaping (Error?) -> Void = { _ in }) {
+        let requestURL = baseURL.appendingPathComponent("/upvotes/issue")
+        guard let bearer = bearer else { return }
         
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "POST"
         
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
+            if let error = error {
+                NSLog("Error upvoting issue")
+                completion(error)
+                return
+                
+            }
+            completion(nil)
+            }.resume()
         
     }
     
     func upvoteComment(userID: Int, commentID: Int, completion: @escaping (Error?) -> Void = { _ in }) {
+        let requestURL = baseURL.appendingPathComponent("/upvotes/comment")
+        guard let bearer = bearer else { return }
         
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "POST"
         
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
+            if let error = error {
+                NSLog("Error upvoting comment")
+                completion(error)
+                return
+                
+            }
+            completion(nil)
+            }.resume()
         
     }
 

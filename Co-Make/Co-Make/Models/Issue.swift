@@ -10,7 +10,8 @@ import Foundation
 
 // MARK: - Issue
 struct Issue: Codable {
-    var id, userID, zipCode: Int
+    var id: Int? = nil
+    var userID, zipCode: Int
     let issueName, issueDescription, category: String
     let volunteer, completed, openForVoting: Bool
     let picture: String?
