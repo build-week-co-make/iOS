@@ -113,7 +113,7 @@ class ApiController {
         guard let bearer = bearer else { return }
         let signInURL = baseURL.appendingPathComponent("auth/login")
         
-        let userParameters: [String : String ] = [
+        let userParameters: [String : String] = [
             "email" : email,
             "password" : password
         ]
@@ -280,21 +280,13 @@ class ApiController {
     
     
     func putIssueOnServer(issue: Issue, completion: @escaping (Error?) -> Void = { _ in }) {
-        let userID = issue.userID
         let requestURL = baseURL.appendingPathComponent("issues")
-        let issueParameters: [String : Any ] = [
-            "user_id" : issue.userID,
-            "zipCode" : issue.zipCode,
-            "issue_name" : issue.issueName,
-            "description" : issue.issueDescription,
-            "category" : issue.category
-        ]
-        
+       
         var request = URLRequest(url: requestURL)
         request.httpMethod = "POST"
         
         do {
-            request.httpBody = try JSONEncoder().encode(issueParameters)
+            request.httpBody = try JSONEncoder().encode(issue)
         } catch {
             NSLog("Error ecoding issue: \(issue) \(error)")
             completion(error)
@@ -389,7 +381,7 @@ class ApiController {
         
     // Call when selecting table view cell on feed
     func fetchSingleIssueWithComments(id: Int, completion: @escaping (Error?) -> Void = { _ in }) {
-        let requestURL = baseURL.appendingPathComponent("issues")
+        let requestURL = baseURL.appendingPathComponent("issues/\(id)/withComments")
         
         URLSession.shared.dataTask(with: requestURL) { (data, _, error) in
             if let error = error {
@@ -404,7 +396,7 @@ class ApiController {
                 return }
             
             do {
-                let issues = Array(try JSONDecoder().decode([Issue : Any].self, from: data).values)
+                let issue = try JSONDecoder().decode(IssueWithComments.self, from: data)
                 completion(nil)
             } catch {
                 NSLog("Error decoding issues: \(error)")
@@ -413,40 +405,21 @@ class ApiController {
             }
             }.resume()
     }
+    
+    func upvoteIssue(userID: Int, issueID: Int, completion: @escaping (Error?) -> Void = { _ in }) {
+        
+        
+        
+        
+    }
+    
+    func upvoteComment(userID: Int, commentID: Int, completion: @escaping (Error?) -> Void = { _ in }) {
+        
+        
+        
+        
+    }
 
     
 }
 
-
-
-class DictionaryEncoder {
-    
-    private let encoder = JSONEncoder()
-    
-    
-    var dataEncodingStrategy: JSONEncoder.DataEncodingStrategy {
-        set { encoder.dataEncodingStrategy = newValue }
-        get { return encoder.dataEncodingStrategy }
-    }
-    
-    
-    func encode<T>(_ value: T) throws -> [String: Any] where T : Encodable {
-        let data = try encoder.encode(value)
-        return try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
-    }
-}
-
-class DictionaryDecoder {
-    
-    private let decoder = JSONDecoder()
-    
-    var dataDecodingStrategy: JSONDecoder.DataDecodingStrategy {
-        set { decoder.dataDecodingStrategy = newValue }
-        get { return decoder.dataDecodingStrategy }
-    }
-   
-    func decode<T>(_ type: T.Type, from dictionary: [String: Any]) throws -> T where T : Decodable {
-        let data = try JSONSerialization.data(withJSONObject: dictionary, options: [])
-        return try decoder.decode(type, from: data)
-    }
-}
