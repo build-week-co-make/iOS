@@ -15,6 +15,7 @@ struct Issue: Codable {
     let volunteer, completed, openForVoting: Bool
     let picture: String?
     
+    
     enum CodingKeys: String, CodingKey {
         case id
         case userID = "user_id"
