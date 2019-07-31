@@ -43,9 +43,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Will you allow this app to always know your location?</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Will you allow this app to know your current location?</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Will you allow this app to always know your location?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Will you allow this app to know your current location?</string>
+	<key>NSCameraUsageDescription</key>
+	<string>CoMake would like access to use your camera!</string>
 </dict>
 </plist>

@@ -9,22 +9,44 @@
 import UIKit
 
 class CreateIssueViewController: UIViewController {
-
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var issueImageView: UIImageView!
+    @IBOutlet weak var takePhotoButton: UIButton!
+    @IBOutlet weak var addPhotoButton: UIButton!
+    
+    
+    let pickerController = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        takePhotoButton.layer.cornerRadius = 5.0
+        addPhotoButton.layer.cornerRadius = 5.0
+        pickerController.sourceType = UIImagePickerController.SourceType.camera
+        pickerController.delegate = self
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func takePhotoButtonTapped(_ sender: UIButton) {
+        present(pickerController, animated: true, completion: nil)
     }
-    */
+    
+}
 
+extension CreateIssueViewController: UIImagePickerControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("The camera has been closed")
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        issueImageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+    }
+}
+
+extension CreateIssueViewController: UINavigationControllerDelegate {
+    
 }

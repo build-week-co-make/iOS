@@ -24,6 +24,8 @@ class ApiController {
     var bearer: Bearer?
     var userAuthentication: UserAuthentication?
     
+    
+    
     private let baseURL = URL(string: "https://co-make.herokuapp.com")!
     
     // MARK: - User data functions

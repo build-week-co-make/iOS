@@ -9,7 +9,7 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-
+    
     @IBOutlet var userImage: UIImageView!
     
     @IBOutlet var userActualName: UILabel!
@@ -17,6 +17,7 @@ class FeedViewController: UIViewController {
     @IBOutlet var userAddress: UILabel!
     
     @IBOutlet var issuesTableView: UITableView!
+    @IBOutlet var feedTabBarItem: UITabBarItem!
     
     @IBOutlet var searchIssues: UISearchBar!
     
@@ -24,24 +25,29 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-     searchIssues.cornerRadius = 20
-    userImage.image = UIImage(named: "sign-in-4")
-     userImage.cornerRadius = 23
+        
+        feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
+        
+        feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for:.selected)
+        
+        
+        searchIssues.cornerRadius = 20
+        userImage.image = UIImage(named: "sign-in-4")
+        userImage.cornerRadius = 23
         
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 extension FeedViewController: UITableViewDelegate{
     
@@ -63,7 +69,7 @@ extension FeedViewController: UITableViewDataSource{
         cell.secondFilterType.text = selectedIssue
         cell.issueImage.cornerRadius = 15
         cell.issueImage.image = UIImage(named: "sign-in-4")
-      
+        
         return cell
     }
     

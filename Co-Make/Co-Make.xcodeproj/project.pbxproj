@@ -19,6 +19,8 @@
 		EF03D4B322EE7A9000A01648 /* UserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */; };
 		EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B422EE7B0000A01648 /* APIController.swift */; };
 		EF03D4BA22EE7FD100A01648 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */; };
+		EF05608F22F0BFB100A467FC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05608E22F0BFB100A467FC /* ProfileViewController.swift */; };
+		EF05609122F0BFF900A467FC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05609022F0BFF900A467FC /* ProfileTableViewCell.swift */; };
 		EF0A69A022ECDBF6004115F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */; };
 		EF0A69A522ECDBF6004115F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A322ECDBF6004115F4 /* Main.storyboard */; };
 		EF0A69A722ECDC1B004115F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0A69A622ECDC1B004115F4 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		EF03D4B222EE7A9000A01648 /* UserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentation.swift; sourceTree = "<group>"; };
 		EF03D4B422EE7B0000A01648 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		EF03D4B922EE7FD100A01648 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
+		EF05608E22F0BFB100A467FC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EF05609022F0BFF900A467FC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		EF0A699C22ECDBF6004115F4 /* Co-Make.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Co-Make.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0A699F22ECDBF6004115F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0A69A422ECDBF6004115F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		EF05609222F0C00500A467FC /* ProfileViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF05608E22F0BFB100A467FC /* ProfileViewController.swift */,
+				EF05609022F0BFF900A467FC /* ProfileTableViewCell.swift */,
+			);
+			path = ProfileViewControllers;
+			sourceTree = "<group>";
+		};
 		EF0A699322ECDBF5004115F4 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 				EFF7981F22EFD4CE001CE26D /* FeedIDetailViewControllers */,
 				EFF7982022EFD534001CE26D /* MainFeedViewControllers */,
 				A2D0F7DB22EF841800175F8C /* CreateIssueViewController.swift */,
+				EF05609222F0C00500A467FC /* ProfileViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -258,9 +272,11 @@
 				EF03D4AC22EE2CDC00A01648 /* AllowLocationViewController.swift in Sources */,
 				EFF7981522EF7E5F001CE26D /* IssueTableViewCell.swift in Sources */,
 				EFF49FB522ED07E200363D1C /* PageViewController.swift in Sources */,
+				EF05608F22F0BFB100A467FC /* ProfileViewController.swift in Sources */,
 				6FC1726C22EF92F5007A380C /* User+Convenience.swift in Sources */,
 				EFF49FB922ED373F00363D1C /* SignUpViewController.swift in Sources */,
 				EFF7981D22EFAF82001CE26D /* ImageCell.swift in Sources */,
+				EF05609122F0BFF900A467FC /* ProfileTableViewCell.swift in Sources */,
 				EF03D4B522EE7B0000A01648 /* APIController.swift in Sources */,
 				EF03D4AE22EE6DD400A01648 /* FeedViewController.swift in Sources */,
 				EFF7981922EF8E81001CE26D /* Design.swift in Sources */,
