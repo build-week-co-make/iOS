@@ -307,9 +307,11 @@ class ApiController {
     }
     
     // call on create issue page
-    func createIssue(id: Int, userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String? = nil) {
+    
+    // need a way to get id
+    func createIssue(id: Int,userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String? = nil) {
         
-       let issue = Issue(id: id, userID: userID, zipCode: zipCode, issueName: issueName, issueDescription: description, category: category, volunteer: volunteer, completed: completed, openForVoting: openForVoting, picture: picture)
+        let issue = Issue(id: id, userID: userID, zipCode: zipCode, issueName: issueName, issueDescription: description, category: category, volunteer: volunteer, completed: completed, openForVoting: openForVoting, picture: picture)
         
         putIssueOnServer(issue: issue)
         
