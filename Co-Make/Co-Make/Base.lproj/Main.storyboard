@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="guD-Ez-gJa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4N-Ll-Cwa">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,7 +21,7 @@
         <!--Page View Controller-->
         <scene sceneID="eV1-4O-Peb">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="guD-Ez-gJa" customClass="PageViewController" customModule="Co_Make" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="Page" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="guD-Ez-gJa" customClass="PageViewController" customModule="Co_Make" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwY-mE-Gjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-826" y="131"/>
@@ -838,7 +838,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maG-Hf-Esj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6156.521739130435" y="462.72321428571428"/>
+            <point key="canvasLocation" x="6164" y="458"/>
         </scene>
         <!--CreateIssue-->
         <scene sceneID="KOW-ra-dIu">
@@ -1463,10 +1463,10 @@
             </objects>
             <point key="canvasLocation" x="2287" y="811"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Co Make Tab Bar Controller-->
         <scene sceneID="aec-k4-DAA">
             <objects>
-                <tabBarController storyboardIdentifier="MainView" automaticallyAdjustsScrollViewInsets="NO" id="M4N-Ll-Cwa" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainView" automaticallyAdjustsScrollViewInsets="NO" id="M4N-Ll-Cwa" customClass="CoMakeTabBarController" customModule="Co_Make" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="toI-Ml-ter">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1477,6 +1477,7 @@
                         <segue destination="tD0-GN-mvh" kind="relationship" relationship="viewControllers" id="ebt-Yx-tkr"/>
                         <segue destination="C1Q-js-KvV" kind="relationship" relationship="viewControllers" id="Qnn-KC-MXF"/>
                         <segue destination="KQM-hd-92X" kind="relationship" relationship="viewControllers" id="RLp-6S-TMx"/>
+                        <segue destination="guD-Ez-gJa" kind="presentation" identifier="CreateUser" id="lQb-TN-x1n"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25x-ze-WAm" userLabel="First Responder" sceneMemberID="firstResponder"/>

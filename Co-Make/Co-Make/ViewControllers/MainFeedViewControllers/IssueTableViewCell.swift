@@ -21,6 +21,12 @@ class IssueTableViewCell: UITableViewCell {
     @IBOutlet var firstFIlterType: UILabel!
     
     @IBOutlet var secondFilterType: UILabel!
+    
+    var issue: Issue? {
+        didSet {
+            updateViews()
+        }
+    }
 
     
     ///put all logic related to the cell in a computed property of type issue, in the didSet property
@@ -31,6 +37,29 @@ class IssueTableViewCell: UITableViewCell {
     }
 
 
+    func updateViews() {
+        
+        guard let issue = issue else { return }
+        
+        
+        issueImage.image = issue.picture?.toImage()
+        issueTitle.text = issue.issueName
+        issueCreator.text = "\(issue.userID)"
+        //        numberOfUpVotes.text = issue
+        firstFIlterType.text = issue.category
+    
+    }
 
+   
 
 }
+    
+    extension String {
+        func toImage() -> UIImage? {
+            if let data = Data(base64Encoded: self, options: .ignoreUnknownCharacters){
+                return UIImage(data: data)
+            }
+            return nil
+        }
+    }
+
