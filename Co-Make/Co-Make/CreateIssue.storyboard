@@ -175,7 +175,7 @@
         <image name="AddPhoto" width="163" height="49"/>
         <image name="Arrow-left - simple-line-icons" width="12" height="21"/>
         <image name="Bg Banner" width="312" height="246"/>
-        <image name="Plus" width="144" height="144"/>
+        <image name="Plus" width="48" height="48"/>
         <image name="PostRect" width="371" height="49"/>
         <image name="add" width="48" height="48"/>
         <image name="createIssueImagePlaceholder" width="343" height="343"/>

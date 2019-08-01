@@ -43,24 +43,19 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+     
+        guard let user = fetchedResultsController?.fetchedObjects?[0],
+            let username = user.username else { return }
         
-        
-        guard let userID = fetchedResultsController?.fetchedObjects?[0].userID else {
-            
-            // Segue to sign up
-            return
-        }
-        
-        let user = fetchedResultsController?.fetchedObjects?[0]
-        guard let email = user?.email,
-            let password = user?.password else { return }
-        apiController?.signIn(with: email, password: password)
+        userActualName.text = username
         
         apiController?.fetchIssuesFromServer()
         
     }
+    
+    
     
     
     
@@ -80,8 +75,8 @@ extension FeedViewController: UITableViewDelegate{
 }
 extension FeedViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let apiController = apiController else { return 1 }
-        return apiController.issues.count
+        
+        return apiController?.issues.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

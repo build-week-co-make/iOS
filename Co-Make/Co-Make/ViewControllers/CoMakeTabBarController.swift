@@ -59,8 +59,15 @@ class CoMakeTabBarController: UITabBarController, NSFetchedResultsControllerDele
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        
+        
         if fetchedResultsController.fetchedObjects?.count == 0 {
             self.showSignupModally()
+        } else {
+            guard let user = fetchedResultsController.fetchedObjects?[0],
+                let email = user.email,
+                let password = user.password else { return }
+            self.apiController.signIn(with: email, password: password)
         }
     }
     

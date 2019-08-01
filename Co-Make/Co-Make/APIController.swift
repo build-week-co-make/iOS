@@ -52,7 +52,7 @@ class ApiController {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let response = response as? HTTPURLResponse,
-                response.statusCode != 200 {
+                response.statusCode != 201 {
                 completion(nil, NSError(domain: "", code: response.statusCode, userInfo: nil))
                 return
             }
@@ -65,35 +65,31 @@ class ApiController {
             // Data Decode
             
             guard let data = data else { return }
+            
             do {
                 
                 let jsonDecoder = JSONDecoder()
                 let results = try jsonDecoder.decode(UserRepresentation.self, from: data)
                 
                 // Use function to add user to core data
-                self.createUser(userID: results.id!, username: results.username!, email: results.email, password: results.password, zipCode: results.zipCode)
-                
-                
+                DispatchQueue.main.async {
+                    self.createUser(userID: results.id!, username: results.username!, email: results.email, password: userRep.password, zipCode: results.zipCode)
+                }
                 completion(results, nil)
-            }
-            
-            catch {
+            } catch {
                 NSLog("Error decoding user: \(error)")
                 completion(nil, error)
                 return
             }
-            
-            completion(nil, error)
-            
             }.resume()
         
-        // createuser
     }
     
    
     
     func createUser(userID: Int, username: String, email: String, password: String, zipCode: Int) {
         let user = User(userID: userID, username: username, email: email, password: password, zipCode: zipCode)
+        
         do {
             try CoreDataStack.shared.save()
         } catch {
@@ -109,7 +105,6 @@ class ApiController {
     // MARK: - Signing in with user data
     
     func signIn(with email: String, password: String, completion: @escaping (Error?) -> Void = { _ in }) {
-        guard let bearer = bearer else { return }
         let signInURL = baseURL.appendingPathComponent("auth/login")
         
         let userParameters: [String : String] = [
@@ -121,10 +116,10 @@ class ApiController {
         request.httpMethod = "POST"
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
        
         
         let jsonEncoder = JSONEncoder()
+        
         do {
             let jsonData = try jsonEncoder.encode(userParameters)
              request.httpBody = jsonData
@@ -163,6 +158,7 @@ class ApiController {
             completion(nil)
             }.resume()
     }
+    
     
     // MARK: - Editing user data
     
