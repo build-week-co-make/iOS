@@ -18,6 +18,10 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet var passwordTextField: UITextField!
     
+    var name: String = ""
+    var email: String = ""
+    var password: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,15 +35,24 @@ class SignUpViewController: UIViewController {
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddLocation" {
-//            let allowLocationVC = segue.destination as! AllowLocationViewController
-//            allowLocationVC.user = user
+            guard let allowLocationVC = segue.destination as? AllowLocationViewController else { return }
+            allowLocationVC.name = self.name
+            allowLocationVC.email = self.email
+            allowLocationVC.password = self.password
         }
      }
     
     
 
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
-   
+        if let name = nameTextField.text, !name.isEmpty,
+            let email = emailTextField.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty {
+            self.name = name
+            self.email = email
+            self.password = password
+            performSegue(withIdentifier: "AddLocation", sender: self)
+        }
     }
     
     

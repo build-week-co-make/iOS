@@ -26,7 +26,9 @@ extension User {
         
         self.init(context: context)
         
-        self.userID = userID
+        guard let id = userRepresentation.id else { return }
+        
+        self.userID = Int32(id)
         self.username = userRepresentation.username
         self.email = userRepresentation.email
         self.password = userRepresentation.password
@@ -39,7 +41,7 @@ extension User {
             let email = email,
             let password = password else { return nil }
         
-        return UserRepresentation(userID: Int(userID), username: username, email: email, password: password, zipCode: Int(zipCode))
+        return UserRepresentation(id: Int(userID), username: username, email: email, password: password, zipCode: Int(zipCode))
     }
     
 }

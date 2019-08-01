@@ -32,18 +32,17 @@ class ApiController {
     // MARK: - Creating user data
     
     // Call in Allow Location
-    func signUp(with user: User, completion: @escaping (UserRepresentation?, Error?) -> Void = { _,_  in }) {
+    func signUp(with userRep: UserRepresentation, completion: @escaping (UserRepresentation?, Error?) -> Void = { _,_  in }) {
         let signUpUrl = baseURL.appendingPathComponent("auth/register")
         
         var request = URLRequest(url: signUpUrl)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-type")
         
-        guard let representation = user.userRepresentation else { completion(nil, NSError()); return }
         
         let jsonEncoder = JSONEncoder()
         do {
-            let jsonData = try jsonEncoder.encode(representation)
+            let jsonData = try jsonEncoder.encode(userRep)
             request.httpBody = jsonData
         } catch {
             print("Error encoding user object: \(error)")
@@ -72,7 +71,7 @@ class ApiController {
                 let results = try jsonDecoder.decode(UserRepresentation.self, from: data)
                 
                 // Use function to add user to core data
-                self.createUser(userID: results.userID, username: results.username!, email: results.email, password: results.password, zipCode: results.zipCode)
+                self.createUser(userID: results.id!, username: results.username!, email: results.email, password: results.password, zipCode: results.zipCode)
                 
                 
                 completion(results, nil)
@@ -172,7 +171,9 @@ class ApiController {
         user.email = representation.email
         user.password = representation.password
         user.zipCode = Int32(representation.zipCode)
-        user.userID = Int32(representation.userID)
+        
+        guard let id = representation.id else { return }
+        user.userID = Int32(id)
     }
     
     // Call on profile page

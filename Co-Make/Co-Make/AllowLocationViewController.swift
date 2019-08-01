@@ -11,9 +11,18 @@ import CoreLocation
 
 class AllowLocationViewController: UIViewController, CLLocationManagerDelegate {
     
+    var apiController = ApiController()
     var locationManager: CLLocationManager!
     var latitude: Double = 0
     var longitude: Double = 0
+    var name: String?
+    var email: String?
+    var password: String?
+    var zipCode: String? {
+        didSet {
+            setupModelAndSegue()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,30 +43,56 @@ class AllowLocationViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBAction func allowLocationTapped(_ sender: UIButton) {
         self.determineMyCurrentLocation()
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        //call create user function from API controller
         
-        let mainView = sb.instantiateViewController(withIdentifier: "MainView")
-        present(mainView, animated: true, completion: nil)
-    
     }
     
-    func getZip(latitude: Double, longitude: Double) {
-        var zipCode: String = ""
+    func setupModelAndSegue(){
+        
+        if let name = self.name,
+            let email = self.email,
+            let password = self.password,
+            let zipCode = self.zipCode {
+            
+            guard let unwrappedZip = Int(zipCode) else { return }
+            
+            let userRep = UserRepresentation(id: nil, username: name, email: email, password: password, zipCode: unwrappedZip)
+            print(userRep.email)
+            
+            self.apiController.signUp(with: userRep) { _,_ in
+                DispatchQueue.main.async {
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    //call create user function from API controller
+                    
+                    let mainView = sb.instantiateViewController(withIdentifier: "MainView")
+                    self.present(mainView, animated: true, completion: nil)
+                }
+                
+            }
+            
+           
+            
+            
+        }
+        
+    }
+    
+    func getZip(latitude: Double, longitude: Double) -> String? {
         let address = CLGeocoder.init()
+        var zipCodePlaceHolder: String?
         address.reverseGeocodeLocation(CLLocation.init(latitude: latitude, longitude: longitude)) { (places, error) in
             if error == nil{
                 if let place = places {
-                    zipCode = place[0].postalCode!
+                    zipCodePlaceHolder = place[0].postalCode!
                     
                     // Assign zipcode to user here.
                     // Convert to Int when assigning.
 //                    user.zipcode = zipCode
-                    print(zipCode)
+                    print(zipCodePlaceHolder)
                     
                 }
             }
         }
+        return zipCodePlaceHolder
     }
     
     // Presents alert that will allow users to enable location services for app.
@@ -84,7 +119,12 @@ class AllowLocationViewController: UIViewController, CLLocationManagerDelegate {
         
         // Gets zip code from coordinates.
         
-        getZip(latitude: latitude, longitude: longitude)
+        if let zipCode = getZip(latitude: latitude, longitude: longitude){
+            if self.zipCode == nil {
+                self.zipCode = zipCode
+            }
+            
+        }
         
         
     }

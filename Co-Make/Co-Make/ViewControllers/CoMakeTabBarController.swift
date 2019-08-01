@@ -39,9 +39,8 @@ class CoMakeTabBarController: UITabBarController, NSFetchedResultsControllerDele
 
         // Do any additional setup after loading the view.
         
+        guard let barViewControllers = self.tabBarController?.viewControllers else { return }
         
-        guard let barViewControllers = self.viewControllers else { return }
-       
         let feedVC = barViewControllers[0] as! FeedViewController
 
         feedVC.apiController = apiController
@@ -54,11 +53,6 @@ class CoMakeTabBarController: UITabBarController, NSFetchedResultsControllerDele
         let profileVC = barViewControllers[2] as! ProfileViewController
         profileVC.apiController = apiController
         profileVC.fetchedResultsController = fetchedResultsController
-        
-    
-        
-      
-        
     }
     
     
@@ -66,7 +60,7 @@ class CoMakeTabBarController: UITabBarController, NSFetchedResultsControllerDele
         super.viewDidAppear(animated)
         
         if fetchedResultsController.fetchedObjects?.count == 0 {
-            showSignupModally()
+            self.showSignupModally()
         }
     }
     

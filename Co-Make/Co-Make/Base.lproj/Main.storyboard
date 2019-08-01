@@ -357,7 +357,6 @@
                                         <state key="normal" title="Button" image="Component"/>
                                         <connections>
                                             <action selector="signUpButtonTapped:" destination="kww-DH-BS9" eventType="touchUpInside" id="cMs-Is-ZRN"/>
-                                            <segue destination="J0H-tH-Dc2" kind="presentation" identifier="AddLocation" id="Atx-RI-8Rg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uR-dn-tf7">
@@ -453,77 +452,12 @@
                         <outlet property="emailTextField" destination="WST-Ph-mF2" id="K44-IO-ADH"/>
                         <outlet property="nameTextField" destination="vgT-Ve-oV8" id="J5Z-Wi-FIm"/>
                         <outlet property="passwordTextField" destination="T0z-Ob-RGa" id="DEg-xK-vsi"/>
+                        <segue destination="Vax-Jh-GC5" kind="show" identifier="AddLocation" id="OVD-LS-ZiM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIx-NX-BG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2286.9565217391305" y="129.91071428571428"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fG5-vh-iEz">
-            <objects>
-                <viewController id="J0H-tH-Dc2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="czG-6x-gel">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="bermuda-welcome" translatesAutoresizingMaskIntoConstraints="NO" id="EKV-Nq-wX4">
-                                <rect key="frame" x="50" y="151" width="314" height="341"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Welcome, Robert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zo-RS-Ewr">
-                                <rect key="frame" x="82" y="518" width="251" height="41"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRz-iE-1ka">
-                                <rect key="frame" x="10" y="611" width="394" height="64.5"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Add your address so that you can start fixing up your neighbourhood!">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="19"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="19" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <real key="NSStrokeWidth" value="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ra1-w3-x1H">
-                                <rect key="frame" x="100" y="727" width="214" height="70"/>
-                                <state key="normal" title="Button" image="Group 2"/>
-                                <connections>
-                                    <segue destination="Vax-Jh-GC5" kind="show" identifier="FindLocation" id="lIW-bL-QQX"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="7Zo-RS-Ewr" firstAttribute="leading" secondItem="IDq-2s-fwd" secondAttribute="leading" constant="82" id="26b-dt-Zpq"/>
-                            <constraint firstItem="EKV-Nq-wX4" firstAttribute="leading" secondItem="IDq-2s-fwd" secondAttribute="leading" constant="50" id="5lC-py-19u"/>
-                            <constraint firstItem="SRz-iE-1ka" firstAttribute="top" secondItem="7Zo-RS-Ewr" secondAttribute="bottom" constant="52" id="CbO-Vv-Ckl"/>
-                            <constraint firstItem="IDq-2s-fwd" firstAttribute="trailing" secondItem="Ra1-w3-x1H" secondAttribute="trailing" constant="100" id="DNP-IU-4HE"/>
-                            <constraint firstItem="IDq-2s-fwd" firstAttribute="bottom" secondItem="Ra1-w3-x1H" secondAttribute="bottom" constant="65" id="N6K-be-Oni"/>
-                            <constraint firstItem="IDq-2s-fwd" firstAttribute="trailing" secondItem="SRz-iE-1ka" secondAttribute="trailing" constant="10" id="NXB-kH-gBE"/>
-                            <constraint firstItem="Ra1-w3-x1H" firstAttribute="top" secondItem="SRz-iE-1ka" secondAttribute="bottom" constant="51.5" id="NrO-7l-dKE"/>
-                            <constraint firstItem="IDq-2s-fwd" firstAttribute="trailing" secondItem="7Zo-RS-Ewr" secondAttribute="trailing" constant="81" id="PE8-G7-bof"/>
-                            <constraint firstItem="SRz-iE-1ka" firstAttribute="leading" secondItem="IDq-2s-fwd" secondAttribute="leading" constant="10" id="ST8-0Y-aeF"/>
-                            <constraint firstItem="Ra1-w3-x1H" firstAttribute="leading" secondItem="IDq-2s-fwd" secondAttribute="leading" constant="100" id="YHX-gB-lhf"/>
-                            <constraint firstItem="IDq-2s-fwd" firstAttribute="trailing" secondItem="EKV-Nq-wX4" secondAttribute="trailing" constant="50" id="aMa-Ot-wDp"/>
-                            <constraint firstItem="7Zo-RS-Ewr" firstAttribute="top" secondItem="EKV-Nq-wX4" secondAttribute="bottom" constant="26" id="qJN-ys-aZm"/>
-                            <constraint firstItem="EKV-Nq-wX4" firstAttribute="top" secondItem="IDq-2s-fwd" secondAttribute="top" constant="107" id="zQv-Vk-BWO"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="IDq-2s-fwd"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xKX-O7-P5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3150.7246376811595" y="129.91071428571428"/>
         </scene>
         <!--Allow Location View Controller-->
         <scene sceneID="WHB-te-3fg">
@@ -612,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGT-SE-qLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3959.420289855073" y="129.91071428571428"/>
+            <point key="canvasLocation" x="3359" y="130"/>
         </scene>
         <!--Feed-->
         <scene sceneID="7PA-MH-noi">
@@ -1488,7 +1422,6 @@
     <resources>
         <image name="Background" width="375" height="812"/>
         <image name="Component" width="207" height="44"/>
-        <image name="Group 2" width="207" height="40"/>
         <image name="Group 2 Copy 2" width="207" height="40"/>
         <image name="Line Copy 3" width="307" height="2"/>
         <image name="Location-pin - simple-line-icons" width="16" height="21"/>
@@ -1503,7 +1436,6 @@
         <image name="bermuda-message-sent" width="277" height="295"/>
         <image name="bermuda-no-comments" width="271" height="327"/>
         <image name="bermuda-success" width="297" height="392"/>
-        <image name="bermuda-welcome" width="297" height="341"/>
         <image name="blueDesign" width="351" height="259"/>
         <image name="blueProfileTabIcon" width="21" height="22"/>
         <image name="feed" width="20" height="22"/>
