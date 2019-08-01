@@ -325,7 +325,7 @@ class ApiController {
     // call on create issue page
     
     // need a way to get id
-    func createIssue(id: Int? = nil,userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String? = nil) {
+    func createIssue(id: Int? = nil,userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String) {
         
         let issue = Issue(id: id, userID: userID, zipCode: zipCode, issueName: issueName, issueDescription: description, category: category, volunteer: volunteer, completed: completed, openForVoting: openForVoting, picture: picture)
         

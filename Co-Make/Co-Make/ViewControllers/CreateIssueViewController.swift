@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
-class CreateIssueViewController: UIViewController {
+class CreateIssueViewController: UIViewController, NSFetchedResultsControllerDelegate {
     //MARK: - IBOutlets and Properties
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var issueImageView: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var zipCodeTextField: UITextField!
     
-//    let apiController: ApiController?
+    var apiController: ApiController?
+    
+    var fetchedResultsController: NSFetchedResultsController<User>?
+    
     var stringImage: String = ""
     let pickerController = UIImagePickerController()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +38,14 @@ class CreateIssueViewController: UIViewController {
     }
     
     @IBAction func postIssueButtonTapped(_ sender: UIButton) {
-//        apiController?.createIssue(id: <#T##Int#>, userID: <#T##Int#>, zipCode: <#T##Int#>, issueName: <#T##String#>, description: <#T##String#>, category: <#T##String#>, volunteer: <#T##Bool#>, completed: <#T##Bool#>, openForVoting: <#T##Bool#>, picture: <#T##String?#>)
-        self.dismiss(animated: true, completion: nil)
+        
+        guard let user = fetchedResultsController?.fetchedObjects?[0],
+            let zipCode = zipCodeTextField.text,
+            let issueName = titleTextField.text,
+            let description = descriptionTextView.text else { return }
+        
+        apiController?.createIssue(userID: Int(user.userID), zipCode: Int(zipCode) ?? Int(user.zipCode), issueName: issueName, description: description, category: "Environment", picture: stringImage)
+        
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIButton) {

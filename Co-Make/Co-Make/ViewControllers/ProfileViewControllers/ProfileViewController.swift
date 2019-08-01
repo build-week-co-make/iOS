@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
    
     @IBOutlet var coreView: UIView!
@@ -25,6 +26,10 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var numberOfVotes: UILabel!
     @IBOutlet var numberOfPosts: UILabel!
+    
+    var apiController: ApiController?
+    
+    var fetchedResultsController: NSFetchedResultsController<User>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
