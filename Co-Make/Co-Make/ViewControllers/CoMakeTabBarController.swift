@@ -40,34 +40,40 @@ class CoMakeTabBarController: UITabBarController, NSFetchedResultsControllerDele
         // Do any additional setup after loading the view.
         
         
-        guard let barViewControllers = self.tabBarController?.customizableViewControllers else { return }
-        print(tabBarController?.customizableViewControllers)
-        print(barViewControllers.count)
-        guard let feedVC = barViewControllers[0] as? FeedViewController else { return }
+        guard let barViewControllers = self.viewControllers else { return }
+       
+        let feedVC = barViewControllers[0] as! FeedViewController
+
         feedVC.apiController = apiController
         feedVC.fetchedResultsController = fetchedResultsController
         
-        guard let createIssueVC = barViewControllers[1] as? CreateIssueViewController else { return }
+        let createIssueVC = barViewControllers[1] as! CreateIssueViewController
         createIssueVC.apiController = apiController
         createIssueVC.fetchedResultsController = fetchedResultsController
         
-        guard let profileVC = barViewControllers[2] as? ProfileViewController else { return }
+        let profileVC = barViewControllers[2] as! ProfileViewController
         profileVC.apiController = apiController
         profileVC.fetchedResultsController = fetchedResultsController
         
+    
+        
+      
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        guard (fetchedResultsController.fetchedObjects?[0]) != nil else {
-            
-            // Send to sign up
-            present((storyboard?.instantiateViewController(withIdentifier: "Page"))!, animated: true, completion: nil)
-            
-            return
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if fetchedResultsController.fetchedObjects?.count == 0 {
+            showSignupModally()
         }
-        
-        
+    }
+    
+    func showSignupModally() {
+        let pagesVC = PageViewController()
+        pagesVC.modalPresentationStyle = .fullScreen
+        present(pagesVC, animated: true, completion: nil)
     }
     
 
