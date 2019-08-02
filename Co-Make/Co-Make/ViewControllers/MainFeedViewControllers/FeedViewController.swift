@@ -47,16 +47,24 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     
   
-    
+    override func viewWillLayoutSubviews() {
+        guard !(fetchedResultsController?.fetchedObjects?.isEmpty ?? true) else {
+            showSignupModally()
+            return }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         issuesTableView.reloadData()
     
-        
+        guard !(fetchedResultsController?.fetchedObjects?.isEmpty ?? true) else {
+            
+            return }
         guard let user = fetchedResultsController?.fetchedObjects?[0],
             let apiController = apiController,
             let email = user.email,
-            let password = user.password else { return }
+            let password = user.password else {
+                showSignupModally()
+                return }
         if Bearer.shared == nil {
             apiController.signIn(with: email, password: password, completion: {_ in
                 apiController.fetchIssuesFromServer(completion: { (_) in
@@ -69,7 +77,11 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
         }
     }
     
-    
+    func showSignupModally() {
+        let pagesVC = PageViewController()
+        pagesVC.modalPresentationStyle = .fullScreen
+        present(pagesVC, animated: true, completion: nil)
+    }
     
     
     func displayUserInfo() {

@@ -53,32 +53,27 @@ class CoMakeTabBarController: UITabBarController, NSFetchedResultsControllerDele
         let profileVC = barViewControllers[2] as! ProfileViewController
         profileVC.apiController = apiController
         profileVC.fetchedResultsController = fetchedResultsController
+        
+        
     }
     
+
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
             if fetchedResultsController.fetchedObjects?.count == 0 {
-            self.showSignupModally()
-        }
-//            } else {
-//                guard let user = fetchedResultsController.fetchedObjects?[0],
-//                    let email = user.email,
-//                    let password = user.password else { return }
-//                if Bearer.shared == nil {
-//                    apiController.signIn(with: email, password: password, completion: {_ in
-//                        self.apiController.fetchIssuesFromServer()
-//                    })
-//                }
-//        }
+                self.showSignupModally()
+            }
+            
+        
 
     }
     
     
     func showSignupModally() {
         let pagesVC = PageViewController()
-        pagesVC.modalPresentationStyle = .fullScreen
+        pagesVC.modalPresentationStyle = .currentContext
         present(pagesVC, animated: true, completion: nil)
     }
     
