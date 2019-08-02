@@ -54,6 +54,17 @@ coreView.shadowOffset = CGSize(width: 0, height: 2)
      
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        displayUserInfo()
+        
+    }
+    
+    func displayUserInfo() {
+        guard let user = fetchedResultsController?.fetchedObjects?[0] else { return }
+        userName.text = user.username
+        zipcode.text = String(user.zipCode)
+    }
 
     /*
     // MARK: - Navigation

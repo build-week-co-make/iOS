@@ -26,17 +26,15 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
     var apiController: ApiController?
     var fetchedResultsController: NSFetchedResultsController<User>?
     
-    private var issues: [Issue] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.issuesTableView.reloadData()
-            }
-        }
-    }
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
         feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         
         feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for:.selected)
@@ -48,46 +46,54 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
         
     }
     
+  
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-     
-
+        issuesTableView.reloadData()
+    
+        
         guard let user = fetchedResultsController?.fetchedObjects?[0],
-            let username = user.username,
+            let apiController = apiController,
             let email = user.email,
             let password = user.password else { return }
-        
-        userActualName.text = username
-        
-        guard let apiController = apiController else { return }
-        
-        
         if Bearer.shared == nil {
-            apiController.signIn(with: email, password: password)
-        } else {
-            apiController.fetchIssuesFromServer()
-            issuesTableView.reloadData()
-            print(apiController.issues)
-
+            apiController.signIn(with: email, password: password, completion: {_ in
+                apiController.fetchIssuesFromServer(completion: { (_) in
+                    DispatchQueue.main.async {
+                        self.displayUserInfo()
+                        self.issuesTableView.reloadData()
+                    }
+                })
+            })
         }
-            }
+    }
     
+    
+    
+    
+    func displayUserInfo() {
+        guard let user = fetchedResultsController?.fetchedObjects?[0] else { return }
+        userActualName.text = user.username
+        userAddress.text = String(user.zipCode)
+    }
 
-    
-    
-    
-    
-    
-     // MARK: - Navigation
-    
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+
+
+
+
+
+// MARK: - Navigation
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "" {
-            
+        
         }
-     }
-    
-    
+    }
+
 }
+
 extension FeedViewController: UITableViewDelegate{
     
 }
@@ -102,7 +108,7 @@ extension FeedViewController: UITableViewDataSource{
         
         let selectedIssue = apiController?.issues[indexPath.row]
         
-       cell.issue = selectedIssue
+        cell.issue = selectedIssue
         
         return cell
     }

@@ -62,6 +62,16 @@ class CoMakeTabBarController: UITabBarController, NSFetchedResultsControllerDele
             if fetchedResultsController.fetchedObjects?.count == 0 {
             self.showSignupModally()
         }
+//            } else {
+//                guard let user = fetchedResultsController.fetchedObjects?[0],
+//                    let email = user.email,
+//                    let password = user.password else { return }
+//                if Bearer.shared == nil {
+//                    apiController.signIn(with: email, password: password, completion: {_ in
+//                        self.apiController.fetchIssuesFromServer()
+//                    })
+//                }
+//        }
 
     }
     

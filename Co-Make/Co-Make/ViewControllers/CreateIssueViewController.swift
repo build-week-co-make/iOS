@@ -28,14 +28,14 @@ class CreateIssueViewController: UIViewController, NSFetchedResultsControllerDel
         super.viewDidLoad()
         
         titleTextField.layer.cornerRadius = 5.0
-        pickerController.sourceType = UIImagePickerController.SourceType.camera
-        pickerController.delegate = self
+//        pickerController.sourceType = UIImagePickerController.SourceType.camera
+//        pickerController.delegate = self
     }
     
     //MARK: - IBActions and Methods
-    @IBAction func takePhotoButtonTapped(_ sender: UIImageView) {
-        present(pickerController, animated: true, completion: nil)
-    }
+//    @IBAction func takePhotoButtonTapped(_ sender: UIImageView) {
+//        present(pickerController, animated: true, completion: nil)
+//    }
     
     @IBAction func postIssueButtonTapped(_ sender: UIButton) {
         
@@ -44,7 +44,7 @@ class CreateIssueViewController: UIViewController, NSFetchedResultsControllerDel
             let issueName = titleTextField.text,
             let description = descriptionTextView.text else { return }
         
-        apiController?.createIssue(userID: Int(user.userID), zipCode: Int(zipCode) ?? Int(user.zipCode), issueName: issueName, description: description, category: "Environment", picture: stringImage)
+        apiController?.createIssue(userID: Int(user.userID), zipCode: Int(zipCode) ?? Int(user.zipCode), issueName: issueName, description: description, category: "Environment", picture: nil) 
         
     }
     

@@ -104,7 +104,7 @@ class ApiController {
     
     // MARK: - Signing in with user data
     
-    func signIn(with email: String, password: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext, completion: @escaping (Error?) -> Void = { _  in }) {
+    func signIn(with email: String, password: String, completion: @escaping (Error?) -> Void = { _  in }) {
         let signInURL = baseURL.appendingPathComponent("auth/login")
         
         let userParameters: [String : String] = [
@@ -308,10 +308,13 @@ class ApiController {
     
     
     func putIssueOnServer(issue: Issue, completion: @escaping (Error?) -> Void = { _ in }) {
+        guard let bearer = Bearer.shared else { return }
         let requestURL = baseURL.appendingPathComponent("issues")
        
         var request = URLRequest(url: requestURL)
         request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
         do {
             request.httpBody = try JSONEncoder().encode(issue)
@@ -337,7 +340,7 @@ class ApiController {
     // call on create issue page
     
     // need a way to get id
-    func createIssue(id: Int? = nil,userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String) {
+    func createIssue(id: Int? = nil,userID: Int, zipCode: Int, issueName: String, description: String, category: String, volunteer: Bool = false, completed: Bool = false, openForVoting: Bool = true, picture: String?) {
         
         let issue = Issue(id: id, userID: userID, zipCode: zipCode, issueName: issueName, issueDescription: description, category: category, volunteer: volunteer, completed: completed, openForVoting: openForVoting, picture: picture)
         

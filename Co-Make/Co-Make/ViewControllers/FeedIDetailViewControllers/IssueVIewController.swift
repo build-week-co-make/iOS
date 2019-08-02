@@ -26,6 +26,8 @@ class IssueVIewController: UIViewController {
         imagePageControl.numberOfPages = images.count
     }
     
+    
+    
     @IBAction func backButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
