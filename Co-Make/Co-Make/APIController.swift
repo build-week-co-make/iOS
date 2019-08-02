@@ -104,7 +104,7 @@ class ApiController {
     
     // MARK: - Signing in with user data
     
-    func signIn(with email: String, password: String, completion: @escaping (Error?) -> Void = { _ in }) {
+    func signIn(with email: String, password: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext, completion: @escaping (Bearer?, Error?) -> Void = { _,_  in }) {
         let signInURL = baseURL.appendingPathComponent("auth/login")
         
         let userParameters: [String : String] = [
@@ -117,7 +117,8 @@ class ApiController {
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
        
-        
+        context.performAndWait {
+            
         let jsonEncoder = JSONEncoder()
         
         do {
@@ -125,39 +126,42 @@ class ApiController {
              request.httpBody = jsonData
         } catch {
             print("Error encoding user object: \(error)")
-            completion(error)
+            completion(nil, error)
             return
         }
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 {
-                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                completion(nil, NSError(domain: "", code: response.statusCode, userInfo: nil))
                 return
             }
             
             if let error = error {
-                completion(error)
+                completion(nil, error)
                 return
             }
             
             guard let data = data else {
-                completion(NSError())
+                completion(nil, NSError())
                 return
             }
             print(String(data: data, encoding: .utf8) ?? "")
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
-                self.bearer = try decoder.decode(Bearer.self, from: data)
+                    self.bearer = try decoder.decode(Bearer.self, from: data)
+                completion(self.bearer, nil)
             } catch {
-                completion(error)
+                completion(nil, error)
                 return
             }
             
-            completion(nil)
             }.resume()
+        }
     }
+    
+    
     
     
     // MARK: - Editing user data
@@ -265,9 +269,15 @@ class ApiController {
     
     // call in view did load of feed view
     func fetchIssuesFromServer(completion: @escaping (Error?) -> Void = { _ in }) {
+        guard let bearer = bearer else { return }
         let requestURL = baseURL.appendingPathComponent("issues")
         
-        URLSession.shared.dataTask(with: requestURL) { (data, _, error) in
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
             if let error = error {
                 NSLog("Error fetching tasks: \(error)")
                 completion(error)

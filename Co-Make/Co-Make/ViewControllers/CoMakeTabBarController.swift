@@ -39,7 +39,7 @@ class CoMakeTabBarController: UITabBarController, NSFetchedResultsControllerDele
 
         // Do any additional setup after loading the view.
         
-        guard let barViewControllers = self.tabBarController?.viewControllers else { return }
+        guard let barViewControllers = viewControllers else { return }
         
         let feedVC = barViewControllers[0] as! FeedViewController
 
@@ -65,9 +65,14 @@ class CoMakeTabBarController: UITabBarController, NSFetchedResultsControllerDele
             self.showSignupModally()
         } else {
             guard let user = fetchedResultsController.fetchedObjects?[0],
-                let email = user.email,
+               let email = user.email,
                 let password = user.password else { return }
-            self.apiController.signIn(with: email, password: password)
+            DispatchQueue.main.async {
+                self.apiController.signIn(with: email, password: password) {
+                    
+                }
+            }
+            
         }
     }
     

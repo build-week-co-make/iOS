@@ -22,15 +22,18 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     @IBOutlet var searchIssues: UISearchBar!
     
-    var apiController: ApiController?
     
-    let sampleData = ["sampledata"]
+    var apiController: ApiController?
+
     
     var fetchedResultsController: NSFetchedResultsController<User>?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
+        
         
         feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         
@@ -46,15 +49,16 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
      
+
         guard let user = fetchedResultsController?.fetchedObjects?[0],
             let username = user.username else { return }
         
         userActualName.text = username
         
         apiController?.fetchIssuesFromServer()
-        
     }
     
+
     
     
     
