@@ -24,17 +24,19 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     
     var apiController: ApiController?
-
-    
     var fetchedResultsController: NSFetchedResultsController<User>?
+    
+    private var issues: [Issue] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.issuesTableView.reloadData()
+            }
+        }
+    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
-        
-        
         feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         
         feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for:.selected)
@@ -51,12 +53,24 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
      
 
         guard let user = fetchedResultsController?.fetchedObjects?[0],
-            let username = user.username else { return }
+            let username = user.username,
+            let email = user.email,
+            let password = user.password else { return }
         
         userActualName.text = username
         
-        apiController?.fetchIssuesFromServer()
-    }
+        guard let apiController = apiController else { return }
+        
+        
+        if Bearer.shared == nil {
+            apiController.signIn(with: email, password: password)
+        } else {
+            apiController.fetchIssuesFromServer()
+            issuesTableView.reloadData()
+            print(apiController.issues)
+
+        }
+            }
     
 
     
@@ -80,7 +94,7 @@ extension FeedViewController: UITableViewDelegate{
 extension FeedViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return apiController?.issues.count ?? 1
+        return apiController?.issues.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

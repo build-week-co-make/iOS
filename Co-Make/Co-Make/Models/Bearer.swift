@@ -11,5 +11,6 @@ import Foundation
 struct Bearer: Codable {
     
     var token: String
+    static var shared: Bearer?
     
 }
