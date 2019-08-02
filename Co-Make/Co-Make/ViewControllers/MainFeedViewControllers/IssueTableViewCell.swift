@@ -43,8 +43,8 @@ class IssueTableViewCell: UITableViewCell {
             let image = issue.picture else { return }
         
         
-        
-//        issueImage.downloaded(from: image)
+//        issueImage.image = image.toImage()
+        issueImage.downloaded(from: image)
         issueTitle.text = issue.issueName
         issueCreator.text = "\(issue.userID)"
         //        numberOfUpVotes.text = issue

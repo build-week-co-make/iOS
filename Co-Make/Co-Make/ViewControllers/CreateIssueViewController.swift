@@ -32,11 +32,11 @@ class CreateIssueViewController: UIViewController, NSFetchedResultsControllerDel
 //        pickerController.delegate = self
     }
     
-    //MARK: - IBActions and Methods
+    // MARK: - IBActions and Methods
 //    @IBAction func takePhotoButtonTapped(_ sender: UIImageView) {
 //        present(pickerController, animated: true, completion: nil)
 //    }
-    
+
     @IBAction func postIssueButtonTapped(_ sender: UIButton) {
         
         guard let user = fetchedResultsController?.fetchedObjects?[0],
@@ -44,7 +44,7 @@ class CreateIssueViewController: UIViewController, NSFetchedResultsControllerDel
             let issueName = titleTextField.text,
             let description = descriptionTextView.text else { return }
         
-        apiController?.createIssue(userID: Int(user.userID), zipCode: Int(zipCode) ?? Int(user.zipCode), issueName: issueName, description: description, category: "Environment", picture: nil) 
+        apiController?.createIssue(userID: Int(user.userID), zipCode: Int(zipCode) ?? Int(user.zipCode), issueName: issueName, description: description, category: "Environment", picture: nil)
         
     }
     
@@ -79,6 +79,24 @@ extension CreateIssueViewController: UIImagePickerControllerDelegate {
         stringImage = convertToBase64(image: issueImageView.image!)
     }
 }
+
+//extension CreateIssueViewController: UITextFieldDelegate {
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        //if the text isn't empty, only then can this method return to the next one.
+//        if let text = textField.text, !text.isEmpty {
+//            switch textField {
+//            case titleTextField:
+//                titleTextField.resignFirstResponder()
+//            case zipCodeTextField:
+//                zipCodeTextField.resignFirstResponder()
+//            default:
+//                textField.resignFirstResponder()
+//            }
+//
+//        }
+//        return false
+//    }
+//}
 
 extension CreateIssueViewController: UINavigationControllerDelegate {
     
