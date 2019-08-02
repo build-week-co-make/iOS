@@ -26,14 +26,8 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
     var apiController: ApiController?
     var fetchedResultsController: NSFetchedResultsController<User>?
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         
         feedTabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
         
@@ -89,11 +83,6 @@ class FeedViewController: UIViewController, NSFetchedResultsControllerDelegate {
         userActualName.text = user.username
         userAddress.text = String(user.zipCode)
     }
-
-
-
-
-
 
 
 // MARK: - Navigation
